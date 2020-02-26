@@ -86,7 +86,7 @@ public class UserController implements Controller {
 			request.put("mode", "mode");
 			MainDispatcher.getInstance().callView(sub_package + "UserDelete", request);
 			break;
-		
+	
 		// Arriva qui dalla UserUpdateView
 		case "UPDATE":
 			id = Integer.parseInt(request.get("id").toString());
