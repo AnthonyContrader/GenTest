@@ -46,5 +46,29 @@ public class TestType {
 			public String toString() {
 				return  id + "\t"  + type_t +"\t\t" +   descrizione + "\t\t";
 			}
+			@Override
+			public boolean equals(Object obj) {
+				if (this == obj)
+					return true;
+				if (obj == null)
+					return false;
+				if (getClass() != obj.getClass())
+					return false;
+				TestType other = (TestType) obj;
+				if (id != other.id)
+					return false;
+				if (type_t == null) {
+					if (other.type_t != null)
+						return false;
+				} else if (!type_t.equals(other.type_t))
+					return false;
+				if (descrizione == null) {
+					if (other.descrizione != null)
+						return false;
+				} else if (!descrizione.equals(other.descrizione))
+					return false;
+				
+				return true;
+			}
 		}
 
