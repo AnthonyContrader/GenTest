@@ -39,8 +39,6 @@ import it.contrader.main.MainDispatcher;
 				System.out.println("[L]eggi [I]nserisci [M]odifica [C]ancella [B]ack [E]sci");
 	
 				this.choice = getInput();
-	
-				
 			}
 			
 			

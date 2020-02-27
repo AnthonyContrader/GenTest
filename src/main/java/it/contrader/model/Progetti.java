@@ -6,20 +6,20 @@ public class Progetti {
 	
 	private int id;
 	private String nome;
-	private Date data_i;
-	private Date data_m;
+	private String data_i;
+	private String data_m;
 	
 	public Progetti() {
 		
 	}
 
-	public Progetti (String nome, Date data_i, Date data_m) {
+	public Progetti (String nome, String data_i2, String data_m2) {
 		this.nome = nome;
-		this.data_i = data_i;
-		this.data_m = data_m;	
+		this.data_i = data_i2;
+		this.data_m = data_m2;	
 	}
 	
-	public Progetti (int id, String nome, Date data_i, Date data_m) {
+	public Progetti (int id, String nome, String data_i, String data_m) {
 		this.id = id;
 		this.nome = nome;
 		this.data_i = data_i;
@@ -38,16 +38,16 @@ public class Progetti {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getData_i() {
+	public String getData_i() {
 		return this.data_i;
 	}
-	public void setData_i(Date data_i) {
+	public void setData_i(String data_i) {
 		this.data_i = data_i;
 	}
-	public Date getData_m() {
+	public String getData_m() {
 		return this.data_m;
 	}
-	public void setData_m(Date data_m) {
+	public void setData_m(String data_m) {
 		this.data_i = data_m;
 	}
 	@Override

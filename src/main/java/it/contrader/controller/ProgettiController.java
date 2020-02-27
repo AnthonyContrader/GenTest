@@ -25,8 +25,8 @@ public class ProgettiController implements Controller {
 		
 		int id;
 		String nome;
-		Date data_i;
-		Date data_m;
+		String data_i;
+		String data_m;
 		
 		switch (mode) {
 		
@@ -34,13 +34,13 @@ public class ProgettiController implements Controller {
 			id = Integer.parseInt(request.get("id").toString());
 			ProgettiDTO progettiDTO = progettiService.read(id);
 			request.put("progetti", progettiDTO);
-			MainDispatcher.getInstance().callView(sub_package + "ProgettRead", request);
+			MainDispatcher.getInstance().callView(sub_package + "ProgettiRead", request);
 			break;
 			
 		case "INSERT":
 			 nome = request.get("nome").toString();
-			 data_i = (Date) request.get("data_i");
-			 data_m = (Date) request.get("data_m");
+			 data_i = request.get("data_i").toString();
+			 data_m = request.get("data_m").toString();
 			 
 			 ProgettiDTO progettitoinsert = new ProgettiDTO(nome, data_i, data_m);
 			 progettiService.insert(progettitoinsert);
@@ -52,8 +52,8 @@ public class ProgettiController implements Controller {
 		case "UPDATE":
 			 id = Integer.parseInt(request.get("id").toString());
 			 nome = request.get("nome").toString();
-			 data_i = (Date) request.get("data_i");
-			 data_m = (Date) request.get("data_m");
+			 data_i =  request.get("data_i").toString();
+			 data_m =  request.get("data_m").toString();
 			 ProgettiDTO progettitoupdate = new ProgettiDTO(nome, data_i, data_m);
 			 progettitoupdate.setId(id);
 			 request = new Request();

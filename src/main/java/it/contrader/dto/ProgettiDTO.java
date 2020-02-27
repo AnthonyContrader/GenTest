@@ -1,24 +1,23 @@
 package it.contrader.dto;
 
-import java.util.Date;
 
 public class ProgettiDTO {
 
 	private int id;
-	private Date data_i;
-	private Date data_m;
+	private String data_i;
+	private String data_m;
 	private String nome;
 	
 	public ProgettiDTO() {
 		
 	}
 	
-	public ProgettiDTO(String nome, Date data_i, Date data_m) {
+	public ProgettiDTO(String nome, String data_i, String data_m) {
 		this.nome = nome;
 		this.data_i = data_i;
 		this.data_m = data_m;
 	}
-	public ProgettiDTO(int id, String nome, Date data_i, Date data_m) {
+	public ProgettiDTO(int id, String nome, String data_i, String data_m) {
 		this.id = id;
 		this.nome = nome;
 		this.data_i = data_i;
@@ -37,16 +36,16 @@ public class ProgettiDTO {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getData_i() {
+	public String getData_i() {
 		return this.data_i;
 	}
-	public void setData_i(Date data_i) {
+	public void setData_i(String data_i) {
 		this.data_i = data_i;
 	}
-	public Date getData_m() {
+	public String getData_m() {
 		return this.data_m;
 	}
-	public void setData_m(Date data_m) {
+	public void setData_m(String data_m) {
 		this.data_m = data_m;
 	}
 	@Override

@@ -12,7 +12,7 @@ public class ProgettiDAO {
 	
 	private final String QUERY_ALL = "SELECT * FROM progetti";
 	private final String QUERY_CREATE = "INSERT INTO progetti (nome, data_i, data_m) VALUES(?,?,?)";
-	private final String QUERY_READ = "SELECT * FROM progetti WHERE ID = ?";
+	private final String QUERY_READ = "SELECT * FROM progetti WHERE id = ?";
 	private final String QUERY_UPDATE = "UPDATE progetti SET nome=?, data_i=?, data_m=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM progetti WHERE id=?";
 	
@@ -30,8 +30,8 @@ public class ProgettiDAO {
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String nome = resultSet.getString("nome");
-				Date data_i = resultSet.getDate("data_i");
-				Date data_m = resultSet.getDate("data_m");
+				String data_i = resultSet.getString("data_i");
+				String data_m = resultSet.getString("data_m");
 				progetti = new Progetti(nome, data_i, data_m);
 				progetti.setId(id);
 				progettiList.add(progetti);
@@ -46,29 +46,29 @@ public class ProgettiDAO {
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_CREATE);
 			preparedStatement.setString(1, progettiToInsert.getNome());
-			preparedStatement.setDate(2, (java.sql.Date) progettiToInsert.getData_i());
-			preparedStatement.setDate(3, (java.sql.Date) progettiToInsert.getData_m());
+			preparedStatement.setString(2, progettiToInsert.getData_i());
+			preparedStatement.setString(3, progettiToInsert.getData_m());
 			preparedStatement.execute();
 			return true;
 		} catch (SQLException e) {
 			return false;
 		}
 	}
-	public Progetti read(int progettiId) {
+	public Progetti read(int Id) {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {
 			
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_READ);
-			preparedStatement.setInt(1, progettiId);
+			preparedStatement.setInt(1, Id);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			resultSet.next();
 			
 			String nome;
-			Date data_i, data_m;
+			String data_i, data_m;
 			
 			nome = resultSet.getString("nome");
-			data_i = resultSet.getDate("data_i");
-			data_m = resultSet.getDate("data_m");
+			data_i = resultSet.getString("data_i");
+			data_m = resultSet.getString("data_m");
 			Progetti progetti = new Progetti(nome, data_i, data_m);
 			progetti.setId(resultSet.getInt("id"));
 			
@@ -99,8 +99,8 @@ public class ProgettiDAO {
 				
 				PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);
 				preparedStatement.setString(1,  progettiToUpdate.getNome());
-				preparedStatement.setDate(2, (java.sql.Date) progettiToUpdate.getData_i());
-				preparedStatement.setDate(3, (java.sql.Date) progettiToUpdate.getData_m());
+				preparedStatement.setString (2, progettiToUpdate.getData_i());
+				preparedStatement.setString (3, progettiToUpdate.getData_m());
 				preparedStatement.setInt(4, progettiToUpdate.getId());
 				int a = preparedStatement.executeUpdate();
 				if (a > 0)
