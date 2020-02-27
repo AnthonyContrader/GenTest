@@ -1,6 +1,5 @@
 package it.contrader.controller;
 import java.util.List;
-import java.sql.Date;
 import it.contrader.dto.ProgettiDTO;
 import it.contrader.main.MainDispatcher;
 import it.contrader.service.ProgettiService;
@@ -19,6 +18,7 @@ public class ProgettiController implements Controller {
 	
 	@Override
 	public void doControl(Request request) {
+		
 		String mode = (String) request.get("mode");
 		String choice = (String) request.get("choice");
 		
@@ -48,6 +48,14 @@ public class ProgettiController implements Controller {
 			 request.put("mode", "mode");
 			 MainDispatcher.getInstance().callView(sub_package + "ProgettiInsert", request);
 			 break;
+		
+		case "DELETE":
+			id = Integer.parseInt(request.get("id").toString());
+			progettiService.delete(id);
+			request = new Request();
+			request.put("mode", "mode");
+			MainDispatcher.getInstance().callView(sub_package + "ProgettiDelete", request);
+			break;
 			 
 		case "UPDATE":
 			 id = Integer.parseInt(request.get("id").toString());
@@ -56,6 +64,7 @@ public class ProgettiController implements Controller {
 			 data_m =  request.get("data_m").toString();
 			 ProgettiDTO progettitoupdate = new ProgettiDTO(nome, data_i, data_m);
 			 progettitoupdate.setId(id);
+			 progettiService.update(progettitoupdate);
 			 request = new Request();
 			 request.put("mode", "mode");
 			 MainDispatcher.getInstance().callView(sub_package + "ProgettiUpdate", request);
@@ -100,9 +109,7 @@ public class ProgettiController implements Controller {
 		default:
 			MainDispatcher.getInstance().callView("Login", null);
 			
-		}
-		
-	}
-		
+		}	
+	}		
 }
 

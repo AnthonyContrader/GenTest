@@ -1,6 +1,6 @@
 package it.contrader.dto;
 
-import java.util.*;
+
 public class CodesDTO {
 
 	
@@ -32,18 +32,18 @@ public CodesDTO() {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	public String getData_m() {
 		return this.data_m;
 	}
-
+	
+	public void setData_m(String data_m) {
+		this.data_m = data_m;
+	}
 	
 	public String toString() {
 		return  id + "\t"  + data_m;
 	}
-
-	
-	
 }
 
 	

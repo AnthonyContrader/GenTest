@@ -21,7 +21,7 @@ public class TestTypeReadView extends AbstractView {
 		if (request != null) {
 			TestTypeDTO testType = (TestTypeDTO) request.get("testType");
 			System.out.println(testType);
-			MainDispatcher.getInstance().callView("testType", null);
+			MainDispatcher.getInstance().callView("TestType", null);
 		}
 	}
 	@Override
@@ -29,6 +29,7 @@ public class TestTypeReadView extends AbstractView {
 		System.out.println("Inserisci l'ID del Type Test:");
 		id=Integer.parseInt(getInput());
 		}
+	
 	@Override
 	public void submit() {
 		request = new Request();

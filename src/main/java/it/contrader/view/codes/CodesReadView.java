@@ -1,14 +1,14 @@
 package it.contrader.view.codes;
-import java.util.Date;
+
+
 
 import it.contrader.controller.Request;
 
-import it.contrader.dto.UserDTO;
+import it.contrader.dto.CodesDTO;
 import it.contrader.main.MainDispatcher;
 import it.contrader.view.AbstractView;
-import it.contrader.view.user.UserReadView;
-public class CodesReadView extends UserReadView {
-	public class UserReadView extends AbstractView {
+
+public class CodesReadView extends AbstractView {
 
 		private int id;
 		private Request request;
@@ -20,8 +20,8 @@ public class CodesReadView extends UserReadView {
 		
 		public void showResults(Request request) {
 			if (request != null) {
-				UserDTO user = (UserDTO) request.get("codes");
-				System.out.println(user);
+				CodesDTO codes = (CodesDTO) request.get("codes");
+				System.out.println(codes);
 				MainDispatcher.getInstance().callView("Codes", null);
 			}
 				
@@ -29,7 +29,7 @@ public class CodesReadView extends UserReadView {
 			}
 		
 		public void showOptions() {
-				System.out.println("Inserisci l'ID dell'utente:");
+				System.out.println("Inserisci id del codice:");
 				id = Integer.parseInt(getInput());
 				
 				
@@ -38,8 +38,7 @@ public class CodesReadView extends UserReadView {
 				request = new Request();
 				request.put("id", id);
 				request.put("mode", mode);
-				MainDispatcher.getInstance().callAction("User", "doControl", request);
+				MainDispatcher.getInstance().callAction("Codes", "doControl", request);
 			}
 	}
-}
 		

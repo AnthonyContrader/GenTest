@@ -1,6 +1,5 @@
 package it.contrader.model;
 
-import java.util.Date;
 
 public class Codes{
 
@@ -37,6 +36,7 @@ public class Codes{
 	public String getData_m() {
 		return this.data_m;
 	}
+	
 	public void setData_m(String data_m) {
 		this.data_m = data_m;
 	}

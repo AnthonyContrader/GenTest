@@ -12,6 +12,11 @@ public class ProgettiUpdateView extends AbstractView {
 	private String data_i;
 	private String data_m;
 	private final String mode = "UPDATE";
+
+	public ProgettiUpdateView() {
+	}
+	
+	
 	@Override
 	public void showResults(Request request) {
 		if (request!=null) {
@@ -23,7 +28,7 @@ public class ProgettiUpdateView extends AbstractView {
 	@Override
 	public void showOptions() {
 		try {
-			System.out.println("Inserisci id dell'utente:");
+			System.out.println("Inserisci id del progetto:");
 			id = Integer.parseInt(getInput());
 			System.out.println("Inserisci il nome del progetto");
 			nome = getInput();
@@ -43,7 +48,8 @@ public class ProgettiUpdateView extends AbstractView {
 		request.put("nome", nome);
 		request.put("data_i", data_i);
 		request.put("data_m", data_m);
-		request.put("mode", mode);		
+		request.put("mode", mode);	
+		MainDispatcher.getInstance().callAction("Progetti", "doControl", request);
 	}
 
 }

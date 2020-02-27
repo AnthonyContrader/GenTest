@@ -8,9 +8,9 @@ import it.contrader.model.TestType;
 public class TestTypeDAO {
 
 	private final String QUERY_ALL = "SELECT * FROM test_type";
-	private final String QUERY_CREATE = "INSERT INTO test_type (id,type_t,descrizione) VALUES(?,?,?)";
+	private final String QUERY_CREATE = "INSERT INTO test_type (type_t, descrizione) VALUES(?,?)";
 	private final String QUERY_READ = "SELECT * FROM test_type WHERE id=?";
-	private final String QUERY_UPDATE = "UPDATE test_type SET id=?,type_t=?,descrizione=? WHERE id=?";
+	private final String QUERY_UPDATE = "UPDATE test_type SET type_t=?,descrizione=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM test_type WHERE id=?";
 	
 	public TestTypeDAO() {
@@ -28,7 +28,7 @@ public class TestTypeDAO {
 				int id =resultSet.getInt("id");
 				String type_t = resultSet.getString("type_t");
 				String descrizione = resultSet.getString("descrizione");
-				testType= new TestType(type_t,descrizione);
+				testType= new TestType(type_t, descrizione);
 				testType.setId(id);
 				testTypesList.add(testType);
 			}
@@ -79,16 +79,17 @@ public class TestTypeDAO {
 		TestType testTypeRead = read(testTypeToUpdate.getId());
 		if(!testTypeRead.equals(testTypeToUpdate)) {
 			try {
-				if(testTypeToUpdate.getType_t() == null || testTypeToUpdate.getType_t().contentEquals("")) {
+				if(testTypeToUpdate.getType_t() == null || testTypeToUpdate.getType_t().equals("")) {
 					testTypeToUpdate.setType_t(testTypeRead.getType_t());
 				}
-				if(testTypeToUpdate.getDescrizione() == null || testTypeToUpdate.getDescrizione().contentEquals("")) {
+				if(testTypeToUpdate.getDescrizione() == null || testTypeToUpdate.getDescrizione().equals("")) {
 					testTypeToUpdate.setDescrizione(testTypeRead.getDescrizione());
 				}
 			
 			PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);
 			preparedStatement.setString(1, testTypeToUpdate.getType_t());
 			preparedStatement.setString(2, testTypeToUpdate.getDescrizione());
+			preparedStatement.setInt(3, testTypeToUpdate.getId());
 			int a = preparedStatement.executeUpdate();
 			if(a>0)
 				return true;

@@ -1,8 +1,6 @@
 package it.contrader.view.codes;
 
 
-import java.util.Date;
-
 import it.contrader.controller.Request;
 import it.contrader.main.MainDispatcher;
 import it.contrader.view.AbstractView;
@@ -11,7 +9,7 @@ public class CodesDeleteView extends AbstractView {
 	private Request request;
 
 	private int id;
-	private final String mode = "Delete";
+	private final String mode = "DELETE";
 
 	public CodesDeleteView() {
 	}
@@ -24,7 +22,7 @@ public void showResults(Request request) {
 	}
 }
 public void showOptions() {
-	System.out.println("Inserisci id dell'utente:");
+	System.out.println("Inserisci id del codice");
 	id = Integer.parseInt(getInput());
 }
 	

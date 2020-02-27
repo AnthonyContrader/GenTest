@@ -19,7 +19,7 @@ public class CodesInsertView<Requets>  extends AbstractView {
 		}
 	}
 	public void showOptions() {
-		System.out.println("Inserisci username dell'utente:");
+		System.out.println("Inserisci la data di modifica:");
 		data_m = getInput();
 		
 }public void submit() {

@@ -93,7 +93,7 @@ public class CodesController implements Controller {
 			switch (choice.toUpperCase()) {
 			
 			case "L":
-				MainDispatcher.getInstance().callView(sub_package + "codesRead", null);
+				MainDispatcher.getInstance().callView(sub_package + "CodesRead", null);
 				break;
 				
 			case "I":

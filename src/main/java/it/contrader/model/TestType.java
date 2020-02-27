@@ -44,7 +44,7 @@ public class TestType {
 
 			@Override
 			public String toString() {
-				return  id + "\t"  + type_t +"\t\t" +   descrizione + "\t\t";
+				return  id + "\t"  + type_t +"\t\t" +   descrizione;
 			}
 			@Override
 			public boolean equals(Object obj) {

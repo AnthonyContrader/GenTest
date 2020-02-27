@@ -20,16 +20,16 @@ public class CodesUpdateView  extends AbstractView {
 	public void showResults(Request request) {
 		if (request!=null) {
 			System.out.println("Modifica andata a buon fine.\n");
-			MainDispatcher.getInstance().callView("User", null);
+			MainDispatcher.getInstance().callView("Codes", null);
 		}
 	}
 	public void showOptions() {
 		try {
-			System.out.println("Inserisci id dell'utente:");
+			System.out.println("Inserisci id del progetto");
 			id = Integer.parseInt(getInput());
 			
-			System.out.println("Inserisci tipo dell'utente:");
-			String codestype = getInput();
+			System.out.println("Inserisci la data di modifica");
+			data_m = getInput();
 		} catch (Exception e) {
 
 		}

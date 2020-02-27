@@ -32,12 +32,13 @@ public class TestTypeController implements Controller {
 			id = Integer.parseInt(request.get("id").toString());
 			TestTypeDTO testTypeDTO = testTypeService.read(id);
 			request.put("testType", testTypeDTO);
-			MainDispatcher.getInstance().callView(sub_package + "testTypeRead", request);
+			MainDispatcher.getInstance().callView(sub_package + "TestTypeRead", request);
 			break;
 			
 		case "INSERT":
 			type_t = request.get("type_t").toString();
 			descrizione = request.get("descrizione").toString();
+			
 			TestTypeDTO testTypetoinsert = new TestTypeDTO(type_t,descrizione);
 			testTypeService.insert(testTypetoinsert);
 			request = new Request();
@@ -65,7 +66,7 @@ public class TestTypeController implements Controller {
 			MainDispatcher.getInstance().callView(sub_package +"TestTypeUpdate", request);
 			break;
 			
-		case "USERLIST":
+		case "TESTTYPELIST":
 			List<TestTypeDTO> testTypesDTO = testTypeService.getAll();
 			request.put("testType", testTypesDTO);
 			MainDispatcher.getInstance().callView("TestType",request);
@@ -103,6 +104,6 @@ public class TestTypeController implements Controller {
 		default:
 			MainDispatcher.getInstance().callView("Login", null);
 		}
-			}
 	}
+}
 			

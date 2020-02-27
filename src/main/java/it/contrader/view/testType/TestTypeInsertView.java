@@ -34,7 +34,7 @@ public class TestTypeInsertView extends AbstractView{
 		public void submit() {
 			request = new Request();
 			request.put("type_t", type_t);
-			request.put("desrizione", descrizione);
+			request.put("descrizione", descrizione);
 			request.put("mode", mode);
 			MainDispatcher.getInstance().callAction("TestType", "doControl", request);
 		}

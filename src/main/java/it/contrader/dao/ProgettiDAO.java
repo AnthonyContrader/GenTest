@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import it.contrader.main.ConnectionSingleton;
 import it.contrader.model.Progetti;
-import java.util.Date;
  
 public class ProgettiDAO {
 	
@@ -54,12 +53,12 @@ public class ProgettiDAO {
 			return false;
 		}
 	}
-	public Progetti read(int Id) {
+	public Progetti read(int progettiId) {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {
 			
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_READ);
-			preparedStatement.setInt(1, Id);
+			preparedStatement.setInt(1, progettiId);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			resultSet.next();
 			
@@ -98,7 +97,7 @@ public class ProgettiDAO {
 				}
 				
 				PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);
-				preparedStatement.setString(1,  progettiToUpdate.getNome());
+				preparedStatement.setString (1,  progettiToUpdate.getNome());
 				preparedStatement.setString (2, progettiToUpdate.getData_i());
 				preparedStatement.setString (3, progettiToUpdate.getData_m());
 				preparedStatement.setInt(4, progettiToUpdate.getId());
