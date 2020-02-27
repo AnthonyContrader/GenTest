@@ -18,7 +18,7 @@
 --
 -- Table structure for table `user`
 --
-create database db;
+
 use db;
 DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -38,12 +38,9 @@ DROP TABLE IF EXISTS `codes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `codes` (
-  `id_c` varchar(5) NOT NULL,
-  `id_progetto` varchar(5) DEFAULT NULL,
+  `id` int  NOT NULL AUTO_INCREMENT,
   `data_m` date DEFAULT NULL,
-  PRIMARY KEY (`id_c`),
-  KEY `id_progetto` (`id_progetto`),
-  CONSTRAINT `codes_ibfk_1` FOREIGN KEY (`id_progetto`) REFERENCES `progetti` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,7 +49,7 @@ DROP TABLE IF EXISTS `progetti`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `progetti` (
-  `id` varchar(5) NOT NULL,
+  `id` int NOT NULL auto_increment,
   `nome` varchar(20) DEFAULT NULL,
   `data_i` date DEFAULT NULL,
   `data_m` date DEFAULT NULL,
@@ -64,13 +61,10 @@ DROP TABLE IF EXISTS `test_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `test_type` (
-  `id` varchar(5) NOT NULL,
-  `id_codice` varchar(5) DEFAULT NULL,
+  `id` int NOT NULL auto_increment,
   `type_t` varchar(20) DEFAULT NULL,
   `descrizione` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_codice` (`id_codice`),
-  CONSTRAINT `test_type_ibfk_1` FOREIGN KEY (`id_codice`) REFERENCES `codes` (`id_c`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
