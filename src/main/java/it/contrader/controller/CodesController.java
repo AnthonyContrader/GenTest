@@ -31,7 +31,7 @@ public class CodesController implements Controller {
 		String choice = (String) request.get("choice");
 
 		int id;
-     	Date data_m;
+     	String data_m;
 		
 
 		switch (mode) {
@@ -45,7 +45,7 @@ public class CodesController implements Controller {
 			break;
 		
 		case "INSERT":
-			data_m = (Date) request.get("data_m");
+			data_m = request.get("data_m").toString();
 			
 		
 			CodesDTO codestoinsert = new CodesDTO(data_m);
@@ -69,7 +69,7 @@ public class CodesController implements Controller {
 		
 		case "UPDATE":
 			id = Integer.parseInt(request.get("id").toString());
-			data_m =(Date) request.get("codestype"); 
+			data_m = request.get("codestype").toString(); 
 			CodesDTO codestoupdate = new CodesDTO(data_m);
 			codestoupdate.setId(id);
 			codesService.update(codestoupdate);

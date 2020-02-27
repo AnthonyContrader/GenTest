@@ -26,7 +26,7 @@ public class CodesDAO {
 			Codes codes;
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
-				Date data_m = resultSet.getDate("data_m");
+				String data_m = resultSet.getString("data_m");
 				codes = new Codes(data_m);
 				codes.setId(id);
 				codesList.add(codes);
@@ -43,7 +43,7 @@ public class CodesDAO {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {	
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_CREATE);
-			preparedStatement.setDate(1, (java.sql.Date) codesToInsert.getData_m());
+			preparedStatement.setString(1, codesToInsert.getData_m());
 			preparedStatement.execute();
 			return true;
 		} catch (SQLException e) {
@@ -59,9 +59,9 @@ public class CodesDAO {
 			preparedStatement.setInt(1, codesId);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			resultSet.next();
-			Date data_m;
+			String data_m;
 
-		    data_m= resultSet.getDate("data_m");
+		    data_m= resultSet.getString("data_m");
 			Codes codes = new Codes(data_m);
 	        codes.setId(resultSet.getInt("id"));
 
@@ -90,9 +90,8 @@ public class CodesDAO {
 				
 
 				PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);
-				preparedStatement.setDate(1, (java.sql.Date) codesToUpdate.getData_m());
-			
-				preparedStatement.setInt(4, codesToUpdate.getId());
+				preparedStatement.setString(1,  codesToUpdate.getData_m());
+				preparedStatement.setInt(2, codesToUpdate.getId());
 				int a = preparedStatement.executeUpdate();
 				if (a > 0)
 					return true;

@@ -1,11 +1,12 @@
-package it.contrader.model; 
+package it.contrader.model;
+
 import java.util.Date;
 
 public class Codes{
 
 	
 	private int id;
-	private Date data_m;
+	private String data_m;
 
 	
 
@@ -14,12 +15,12 @@ public class Codes{
 		
 	}
 
-	public  Codes(Date data_m) {
+	public  Codes(String data_m) {
 		this.data_m = data_m;
 		
 	}
 
-	public Codes (int id, Date data_m) {
+	public Codes (int id, String data_m) {
 		this.id = id;
 		this.data_m = data_m;
 		
@@ -33,10 +34,10 @@ public class Codes{
 		this.id = id;
 	}
 
-	public Date getData_m() {
+	public String getData_m() {
 		return this.data_m;
 	}
-	public void setData_m(Date data_m) {
+	public void setData_m(String data_m) {
 		this.data_m = data_m;
 	}
 	
