@@ -69,7 +69,7 @@ public class CodesController implements Controller {
 		
 		case "UPDATE":
 			id = Integer.parseInt(request.get("id").toString());
-			data_m = request.get("codestype").toString(); 
+			data_m = request.get("data_m").toString(); 
 			CodesDTO codestoupdate = new CodesDTO(data_m);
 			codestoupdate.setId(id);
 			codesService.update(codestoupdate);

@@ -23,7 +23,7 @@ public class HomeAdminView extends AbstractView {
 	 */
     public void showResults(Request request) {
     	if(request!=null) {
-    	System.out.println("\n Benvenuto in SAMPLE PROJECT "+request.get("username").toString() + "\n");
+    	System.out.println("\n Benvenuto in GenTest "+request.get("username").toString() + "\n");
     	}
     }
 
@@ -33,6 +33,21 @@ public class HomeAdminView extends AbstractView {
      */
     public void showOptions() {
         System.out.println("-------------MENU------------\n");
+        System.out.println("░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄\n" + 
+        		"░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄\n" + 
+        		"░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█\n" + 
+        		"░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░█\n" + 
+        		"░▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░█\n" + 
+        		"█▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒█\n" + 
+        		"█▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█\n" + 
+        		"░█▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█\n" + 
+        		"░░█░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█\n" + 
+        		"░░░█░░██░░▀█▄▄▄█▄▄█▄████░█\n" + 
+        		"░░░░█░░░▀▀▄░█░░░█░███████░█\n" + 
+        		"░░░░░▀▄░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█\n" + 
+        		"░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░█\n" + 
+        		"░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░█\n" + 
+        		"░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░█\n");
         System.out.println(" Seleziona cosa vuoi gestire:");
         System.out.println("[U]tenti [P]rogetti [T]esttype [C]odici [E]sci");
         //Il metodo che salva l'input nella stringa choice.

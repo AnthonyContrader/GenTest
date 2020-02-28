@@ -11,7 +11,7 @@ public class CodesDAO {
 	private final String QUERY_ALL = "SELECT * FROM codes";
 	private final String QUERY_CREATE = "INSERT INTO codes (data_m) VALUES (?)";
 	private final String QUERY_READ = "SELECT * FROM codes WHERE id=?";
-	private final String QUERY_UPDATE = "UPDATE codes SET data_m=?,  WHERE id=?";
+	private final String QUERY_UPDATE = "UPDATE codes SET data_m=?  WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM codes WHERE id=?";
 
 	public CodesDAO() {}

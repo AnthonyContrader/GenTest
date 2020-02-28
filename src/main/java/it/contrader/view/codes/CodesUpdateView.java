@@ -16,13 +16,14 @@ public class CodesUpdateView  extends AbstractView {
 
 	public  void UserUpdateView() {
 	}
-
+	@Override
 	public void showResults(Request request) {
 		if (request!=null) {
 			System.out.println("Modifica andata a buon fine.\n");
 			MainDispatcher.getInstance().callView("Codes", null);
 		}
 	}
+	@Override
 	public void showOptions() {
 		try {
 			System.out.println("Inserisci id del progetto");
@@ -35,12 +36,11 @@ public class CodesUpdateView  extends AbstractView {
 		}
 	
 	}
-
+	@Override
 	public void submit() {
 		request = new Request();
 		request.put("id", id);
 		request.put("data_m", data_m);
-		;
 		request.put("mode", mode);
 		MainDispatcher.getInstance().callAction("Codes", "doControl", request);
 	}
