@@ -137,7 +137,7 @@ public class UserController implements Controller {
 				break;
 
 			case "B":
-				MainDispatcher.getInstance().callView("HomeAdmin", null);
+				MainDispatcher.getInstance().callView("AdminUser", null);
 				break;
 				
 			default:
