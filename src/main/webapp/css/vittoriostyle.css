@@ -9,13 +9,14 @@ div.text{
 	clear:both;
 	margin-top: 3%;
 	margin-bottom: 3%;
+	color:#ffffff;
 }
 
 .header {
 	text-align: center;
 	font-size: 800%;
 	font-family: sans-serif;
-	color: #00a990;
+	color: #074c85;
 }
 
 .main {
@@ -29,8 +30,8 @@ div.text{
 
 .footer {
 	text-align: center;
-	font-size: 70%;
-	background-color: #00a990;
+	font-size: 20%;
+	background-color: #074c85;
 	color: #ffffff;
 	width: 100%;
 	border-radius: 7px;
@@ -138,7 +139,7 @@ tr:nth-child(even) {
 }
 
 th {
-	background-color: #00a990;
+	background-color: #074c85;
 	color: #ffffff;
 	
 }
@@ -159,7 +160,7 @@ select {
   margin: 8px 0;
 }
 select:hover {
-  background-color:  #00ccad;
+  background-color:  #03355e;
 }
 
 option{
@@ -190,7 +191,7 @@ input {
 }
 
 input:hover {
-  background-color:  #00ccad;
+  background-color:  #ffffff;
 }
 
 
@@ -198,7 +199,7 @@ res {
 	float: left;
 	width: 25%;
 	margin-top: 3%;
-	background-color: #00a990;
+	background-color: #074c85;
 	border-radius: 7px;
 	color: #ffffff;
 	text-align:center;
@@ -239,7 +240,7 @@ label {
 button {
   -webkit-transition-duration: 0.1s; /* Safari */
   transition-duration: 0.1s;
-  background-color:  #00a990;
+  background-color:  #074c85;
   border: none;
   color: white;
   padding: 3% 3%;
@@ -257,7 +258,7 @@ button {
 }
 
 button:hover {
-  background-color:  #00ccad; 
+  background-color:  #03355e; 
   color: white;
 }
 
@@ -284,7 +285,7 @@ button:hover {
 
 /*Navigation bar*/
 div.navbar {
-	background: #00a990;
+	background: #074c85;
 	overflow: hidden;
 	position: sticky;
 	width: 100%;
@@ -304,16 +305,16 @@ div.navbar a {
 	text-decoration: none;
 	font-size: 17px;
 	border-radius: 7px;
-	background: #00a990;
+	background: #074c85;
 }
 
 div.navbar a:hover {
-	background: #00ccad;
+	background: #03355e;
 	color: #ffffff;
 }
 
 div.navbar a.active {
-	background: #00ccad;
+	background: #03355e;
 	color: #ffffff;
 }
 

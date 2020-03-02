@@ -10,7 +10,7 @@ import it.contrader.model.User;
  * 
  * @author Vittorio
  * 
- * Implementando questa l'interfaccia converter la classe UserConverter è OBBLIGATA ad implementarne i metodi
+ * Implementando questa l'interfaccia converter la classe UserConverter ï¿½ OBBLIGATA ad implementarne i metodi
  *
  */
 public class UserConverter  implements Converter<User, UserDTO> {
@@ -44,6 +44,7 @@ public class UserConverter  implements Converter<User, UserDTO> {
 		List<UserDTO> userDTOList = new ArrayList<UserDTO>();
 		
 		//Cicla tutti gli elementi della lista e li converte uno a uno
+		
 		for(User user : userList) {
 			//Utilizza il metodo toDTO per convertire ogni singolo elemento della lista
 			//e lo aggiunge adda lista di DTO

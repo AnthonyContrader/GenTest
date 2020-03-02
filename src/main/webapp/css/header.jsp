@@ -8,10 +8,9 @@
 </head>
 <body>
 
-<div class="header">SAMPLE Project
+<div class="header">
+Gentest
 </div>
-
-
 
 </body>
 </html>

@@ -32,4 +32,14 @@
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/UserServlet</url-pattern>
   </servlet-mapping>
+ <servlet>
+    <description></description>
+    <display-name>ProgettiServlet</display-name>
+    <servlet-name>ProgettiServlet</servlet-name>
+    <servlet-class>it.contrader.servlets.ProgettiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProgettiServlet</servlet-name>
+    <url-pattern>/ProgettiServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
