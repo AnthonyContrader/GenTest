@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import = " it.contrader.dto.ProgettiDTO "%>
+    pageEncoding="ISO-8859-1" import ="it.contrader.dto.ProgettiDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,6 @@
 <br>
 
 <div class="main">
-
 <%ProgettiDTO u = (ProgettiDTO) request.getAttribute("dto");%>
 
 
@@ -51,5 +50,10 @@
 <br>
 <br>
 
+
+ </div>
+
+ <%@ include file="../css/footer.jsp" %>
+ 
 </body>
 </html>

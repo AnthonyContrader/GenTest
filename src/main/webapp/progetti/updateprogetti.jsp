@@ -33,26 +33,8 @@
     </div>
   </div>
   
-  <div class="row">
-    <div class="col-25">
-     <label for="pass">P</label>
-    </div>
-    <div class="col-75">
-      <input
-			type="text" id="data_i" name="data_i" value=<%=u.getData_i()%>> 
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-     <label for="data_m">P</label>
-    </div>
-    <div class="col-75">
-      <input
-			type="text" id="data_m" name="data_m" value=<%=u.getData_m()%>> 
-    </div>
-  </div>
       <button type="submit" >Edit</button>
-      </form>>
+      </form>
 	</div>
 <br>
 <%@ include file="../css/footer.jsp" %>	

@@ -1,6 +1,5 @@
 package it.contrader.model;
 
-import java.util.Date;
 
 public class Progetti {
 	
@@ -12,11 +11,17 @@ public class Progetti {
 	public Progetti() {
 		
 	}
-
-	public Progetti (String nome, String data_i2, String data_m2) {
+	
+	public Progetti(int id, String nome, String data_m) {
+		this.id = id;
 		this.nome = nome;
-		this.data_i = data_i2;
-		this.data_m = data_m2;	
+		this.data_m = data_m;
+	}
+
+	public Progetti (String nome, String data_i, String data_m) {
+		this.nome = nome;
+		this.data_i = data_i;
+		this.data_m = data_m;	
 	}
 	
 	public Progetti (int id, String nome, String data_i, String data_m) {

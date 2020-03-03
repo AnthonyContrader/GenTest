@@ -1,5 +1,8 @@
 package it.contrader.dto;
 
+import java.io.File;
+
+import javax.servlet.http.Part;
 
 public class ProgettiDTO {
 
@@ -12,11 +15,17 @@ public class ProgettiDTO {
 		
 	}
 	
-	public ProgettiDTO(String nome, String data_i, String data_m) {
+	public ProgettiDTO(int id, String nome, String data_m) {
+		this.id = id;
+		this.nome = nome;
+		this.data_m = data_m;
+	}
+	
+	public ProgettiDTO (String nome, String data_i, String data_m) {
 		this.nome = nome;
 		this.data_i = data_i;
 		this.data_m = data_m;
-	}
+		}
 	public ProgettiDTO(int id, String nome, String data_i, String data_m) {
 		this.id = id;
 		this.nome = nome;
@@ -48,6 +57,7 @@ public class ProgettiDTO {
 	public void setData_m(String data_m) {
 		this.data_m = data_m;
 	}
+	
 	@Override
 	public String toString() {
 		return id + "\t"  + nome +"\t\t" +  data_i + "\t\t" + data_m;

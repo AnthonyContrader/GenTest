@@ -41,7 +41,7 @@
 		 		
 		%>
 		<tr>
-			<td><a href=ProgettiServlet?mode=read?id=<%=u.getId() %>>
+			<td><a href=ProgettiServlet?mode=read&id=<%=u.getId() %>>
 					<%=u.getNome() %>
 			 </a></td>
 			<td><%=u.getData_i() %></td>
@@ -58,7 +58,7 @@
 	</table>
 			
 
-<form id="floatright" action="ProgettiServlet?mode=insert" method="post">
+<form id="floatright" action="ProgettiServlet?mode=insert" enctype="multipart/form-data" method="post">
   <div class="row">
     <div class="col-25">
       <label for="progetti">Name of the project</label>

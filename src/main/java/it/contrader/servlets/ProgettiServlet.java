@@ -1,19 +1,25 @@
 package it.contrader.servlets;
 
+import java.util.Calendar;
 import java.util.List;
-
-
-
+import java.io.File;
 import java.io.IOException;
-import java.time.LocalDateTime;
-
+import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import it.contrader.dto.ProgettiDTO;
 import it.contrader.service.Service;
 import it.contrader.service.ProgettiService;
+import javax.servlet.http.Part;
+
+
+@MultipartConfig
 
 public class ProgettiServlet  extends HttpServlet{
 	private static final long serialVersionUID = 1L;
@@ -29,6 +35,7 @@ public class ProgettiServlet  extends HttpServlet{
 		
 	}
 	
+
 	@Override 
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Service<ProgettiDTO> service = (Service<ProgettiDTO>) new ProgettiService();
@@ -36,8 +43,9 @@ public class ProgettiServlet  extends HttpServlet{
 		ProgettiDTO dto;
 		int id;
 		boolean ans;
-		long millis=System.currentTimeMillis(); 
+		DateFormat f = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
 		switch (mode.toUpperCase()) {
+		
 		case "PROGETTILIST":
 			updateList(request);
 			getServletContext().getRequestDispatcher("/progetti/progettimanager.jsp").forward(request, response);
@@ -60,20 +68,21 @@ public class ProgettiServlet  extends HttpServlet{
 			
 		case "INSERT":
 			String nome = request.getParameter("nome").toString();
-			 
-	        String data_i=new java.sql.Date(millis).toString();  
-	        String data_m=new java.sql.Date(millis).toString();  
+			Calendar data_ = Calendar.getInstance();
+			String data_i = f.format(data_.getTime()).toString();
+	        String data_m = f.format(data_.getTime()).toString(); 
 			dto = new ProgettiDTO (nome, data_i, data_m);
+			System.out.println("alessop");
 			ans = service.insert(dto);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/progetti/progettimanager.jsp").forward(request, response);
-		
+			break;
 		case "UPDATE":
-			nome = request.getParameter("nome");
-			data_i=new java.sql.Date(millis).toString();  
-	        data_m=new java.sql.Date(millis).toString(); 
+			nome = request.getParameter("nome"); 
+			Calendar data__ = Calendar.getInstance();
+			data_m = f.format(data__.getTime()).toString();
 			id = Integer.parseInt(request.getParameter("id"));
-			dto = new ProgettiDTO (id,nome, data_i, data_m);
+			dto = new ProgettiDTO(id, nome, data_m);
 			ans = service.update(dto);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/progetti/progettimanager.jsp").forward(request, response);
