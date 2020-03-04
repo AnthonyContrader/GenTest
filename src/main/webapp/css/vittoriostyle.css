@@ -224,6 +224,15 @@ form {
   margin-top: 6px;
 }
 
+.col-80 {
+  padding: 100px 20px;	
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+
 /* Clear floats after the columns */
 .row:after {
   content: "";

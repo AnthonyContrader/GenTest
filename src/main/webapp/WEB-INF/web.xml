@@ -8,6 +8,7 @@
     <servlet-class>it.contrader.servlets.LoginServlet</servlet-class>
   </servlet>
   <servlet>
+  	<display-name>LogoutServlet</display-name>
     <servlet-name>LogoutServlet</servlet-name>
     <servlet-class>it.contrader.servlets.LogoutServlet</servlet-class>
   </servlet>
