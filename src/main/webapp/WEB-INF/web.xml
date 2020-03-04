@@ -42,4 +42,14 @@
     <servlet-name>ProgettiServlet</servlet-name>
     <url-pattern>/ProgettiServlet</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>SupportServlet</display-name>
+    <servlet-name>SupportServlet</servlet-name>
+    <servlet-class>it.contrader.servlets.SupportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SupportServlet</servlet-name>
+    <url-pattern>/SupportServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

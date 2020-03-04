@@ -72,7 +72,6 @@ public class ProgettiServlet  extends HttpServlet{
 			String data_i = f.format(data_.getTime()).toString();
 	        String data_m = f.format(data_.getTime()).toString(); 
 			dto = new ProgettiDTO (nome, data_i, data_m);
-			System.out.println("alessop");
 			ans = service.insert(dto);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/progetti/progettimanager.jsp").forward(request, response);
