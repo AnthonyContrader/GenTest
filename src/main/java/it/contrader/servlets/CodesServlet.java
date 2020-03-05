@@ -1,24 +1,25 @@
 package it.contrader.servlets;
 
 import java.util.Calendar;
-import java.util.Iterator;
 import java.util.List;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.servlet.annotation.MultipartConfig;
 import it.contrader.dto.CodesDTO;
 import it.contrader.service.Service;
 import it.contrader.service.CodesService;
+import it.contrader.dto.UserDTO;
+import it.contrader.servlets.LoginServlet;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.FileUtils;
 
 
 
@@ -46,7 +47,6 @@ public class CodesServlet  extends HttpServlet{
 		int id;
 		boolean ans;
 		DateFormat f = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-		String UPLOAD_DIRECTORY = "/Users/samirhysa";
 		switch (mode.toUpperCase()) {
 		
 		case "CODESLIST":
@@ -70,6 +70,7 @@ public class CodesServlet  extends HttpServlet{
 			break;
 			
 		case "INSERT":
+			String cuser= request.getSession().getAttribute("user").toString();
 			String nome = request.getParameter("nome").toString();
 			Calendar data_ = Calendar.getInstance();
 			String data_i = f.format(data_.getTime()).toString();
@@ -78,45 +79,15 @@ public class CodesServlet  extends HttpServlet{
 			ans = service.insert(dto);
 			request.setAttribute("ans", ans);
 			updateList(request);
-			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);
+			Part filePart = request.getPart("file"); 
+			nome = request.getParameter("nome").toString();			
+			InputStream filecontent = filePart.getInputStream();
+			File ciao = new File( "/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/"+cuser+"/"+nome+".java");
+			FileUtils.copyInputStreamToFile(filecontent, ciao);
+			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);		
 			break;
 			
 			
-		case "INSERTCODE":
-			File file ;
-			int maxFileSize = 5000 * 1024;
-			int maxMemSize = 5000 * 1024;
-			String filePath = "/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/data";
-			String contentType = request.getContentType();
-			if ((contentType.indexOf("multipart/form-data") >= 0)) {
-			DiskFileItemFactory factory = new DiskFileItemFactory();
-			factory.setSizeThreshold(maxMemSize);
-			factory.setRepository(new File("c:\\temp"));
-			ServletFileUpload upload = new ServletFileUpload(factory);
-			upload.setSizeMax( maxFileSize );
-			try{
-			List fileItems = upload.parseRequest(request);
-			Iterator i = fileItems.iterator();
-			while ( i.hasNext () )
-			{
-			FileItem fi = (FileItem)i.next();
-			if ( !fi.isFormField () ) {
-			String fieldName = fi.getFieldName();
-			String fileName = fi.getName();
-			boolean isInMemory = fi.isInMemory();
-			long sizeInBytes = fi.getSize();
-			file = new File( filePath + "yourFileName") ;
-			fi.write( file ) ;
-			System.out.println("Uploaded Filename: " + filePath + fileName + "<br>");
-			}
-			}
-			}catch(Exception ex) {
-			System.out.println(ex);
-			}
-			}else{
-			System.out.println("Error in file upload.");
-			}
-			break;
 		case "UPDATE":
 			nome = request.getParameter("nome"); 
 			Calendar data__ = Calendar.getInstance();
@@ -129,7 +100,11 @@ public class CodesServlet  extends HttpServlet{
 			break;
 
 		case "DELETE":
+			cuser = request.getSession().getAttribute("user").toString();
+			nome = request.getParameter("nome").toString();
 			id = Integer.parseInt(request.getParameter("id"));
+			ciao = new File( "/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/"+cuser+"/"+nome+".java");
+			ciao.delete();
 			ans = service.delete(id);
 			request.setAttribute("ans", ans);
 			updateList(request);

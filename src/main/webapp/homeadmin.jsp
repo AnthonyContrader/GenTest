@@ -11,7 +11,6 @@
 <body>
 <%@include file="css/header.jsp"%>
 
-
 <div class="navbar">
   <a class="active" href="homeadmin.jsp">Home</a>
   <a href="UserServlet?mode=userlist">Users</a>
