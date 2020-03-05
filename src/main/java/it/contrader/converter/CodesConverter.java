@@ -6,31 +6,31 @@ import java.util.List;
 import it.contrader.dto.CodesDTO;
 import it.contrader.model.Codes;
 
-public class CodesConverter {
+
+public class CodesConverter implements Converter<Codes, CodesDTO> {
 
 
-public CodesDTO toDTO(Codes codes) {
-	CodesDTO codesDTO = new CodesDTO(codes.getId(), codes.getData_m());
-	return codesDTO;
+	@Override
+	public CodesDTO toDTO(Codes codes) {
+		CodesDTO codesDTO = new CodesDTO(codes.getId(), codes.getData_m(), codes.getData_i(), codes.getNome()) ;
+		return codesDTO;
+	}
 	
-}
-
-public Codes toEntity(CodesDTO codesDTO) {
-Codes codes = new Codes(codesDTO.getId(), codesDTO.getData_m());
-return codes; 
-
-}
-
-public List<CodesDTO> toDTOlist (List<Codes> codesList){
-
-	List<CodesDTO> codesDTOList = new ArrayList<CodesDTO>();
-	for(Codes codes : codesList) {
 	
-	codesDTOList.add(toDTO(codes));
+	
+	@Override
+	public Codes toEntity(CodesDTO codesDTO) {
+		Codes codes = new Codes( codesDTO.getId(), codesDTO.getData_m(), codesDTO.getData_i(), codesDTO.getNome());
+		return codes;
+	}
+	
+	public List<CodesDTO> toDTOList(List<Codes> codesList) {
+		List<CodesDTO> codesDTOList = new ArrayList<CodesDTO>();
+		
+		for(Codes codes : codesList) {
+			codesDTOList.add(toDTO(codes));
 		}
-	return codesDTOList;
+		return codesDTOList;
+	}
 	
-	
-}
-
 }

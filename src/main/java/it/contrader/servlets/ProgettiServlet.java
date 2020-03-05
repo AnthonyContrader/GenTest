@@ -19,7 +19,7 @@ import it.contrader.service.ProgettiService;
 import javax.servlet.http.Part;
 
 
-@MultipartConfig
+
 
 public class ProgettiServlet  extends HttpServlet{
 	private static final long serialVersionUID = 1L;
@@ -73,6 +73,7 @@ public class ProgettiServlet  extends HttpServlet{
 	        String data_m = f.format(data_.getTime()).toString(); 
 			dto = new ProgettiDTO (nome, data_i, data_m);
 			ans = service.insert(dto);
+			request.setAttribute("ans", ans);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/progetti/progettimanager.jsp").forward(request, response);
 			break;

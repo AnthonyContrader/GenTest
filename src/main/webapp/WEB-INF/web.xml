@@ -53,4 +53,22 @@
     <servlet-name>SupportServlet</servlet-name>
     <url-pattern>/SupportServlet</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>CodesServlet</display-name>
+    <servlet-name>CodesServlet</servlet-name>
+    <servlet-class>it.contrader.servlets.CodesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CodesServlet</servlet-name>
+    <url-pattern>/CodesServlet</url-pattern>
+  </servlet-mapping>
+  
+  <context-param> 
+   <description>Location to store uploaded file</description> 
+   <param-name>file-upload</param-name> 
+   <param-value>
+      c:\apache-tomcat-9.0.31\webapps\data\
+   </param-value> 
+</context-param>
 </web-app>

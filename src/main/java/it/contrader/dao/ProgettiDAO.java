@@ -5,8 +5,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.Part;
-
 import it.contrader.utils.ConnectionSingleton;
 import it.contrader.model.Progetti;
  
@@ -18,9 +16,7 @@ public class ProgettiDAO implements DAO<Progetti>{
 	private final String QUERY_UPDATE = "UPDATE progetti SET nome=?, data_i=?, data_m=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM progetti WHERE id=?";
 	
-	public ProgettiDAO() {
-		
-	}
+	public ProgettiDAO() {}
 	
 	public List<Progetti>getAll(){
 		List<Progetti> progettiList = new ArrayList<>();
@@ -34,7 +30,6 @@ public class ProgettiDAO implements DAO<Progetti>{
 				String nome = resultSet.getString("nome");
 				String data_i = resultSet.getString("data_i");
 				String data_m = resultSet.getString("data_m");
-				String filecode = resultSet.getString("filecode");
 				progetti = new Progetti(nome, data_i, data_m);
 				progetti.setId(id);
 				progettiList.add(progetti);

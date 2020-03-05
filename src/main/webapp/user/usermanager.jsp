@@ -20,6 +20,7 @@
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 <div class="main">
+
 	<%
 		List<UserDTO> list = (List<UserDTO>) request.getAttribute("list");
 	%>
