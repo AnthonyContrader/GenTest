@@ -12,15 +12,16 @@ public class CodesConverter implements Converter<Codes, CodesDTO> {
 
 	@Override
 	public CodesDTO toDTO(Codes codes) {
-		CodesDTO codesDTO = new CodesDTO(codes.getId(), codes.getData_m(), codes.getData_i(), codes.getNome()) ;
+		CodesDTO codesDTO = new CodesDTO(codes.getId(), codes.getData_m(), codes.getData_i(), codes.getNome(), codes.getType_t()) ;
 		return codesDTO;
 	}
 	
 	
 	
+	
 	@Override
 	public Codes toEntity(CodesDTO codesDTO) {
-		Codes codes = new Codes( codesDTO.getId(), codesDTO.getData_m(), codesDTO.getData_i(), codesDTO.getNome());
+		Codes codes = new Codes( codesDTO.getId(), codesDTO.getData_m(), codesDTO.getData_i(), codesDTO.getNome(), codesDTO.getType_t());
 		return codes;
 	}
 	

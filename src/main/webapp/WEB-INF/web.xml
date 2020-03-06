@@ -64,11 +64,4 @@
     <url-pattern>/CodesServlet</url-pattern>
   </servlet-mapping>
   
-  <context-param> 
-   <description>Location to store uploaded file</description> 
-   <param-name>file-upload</param-name> 
-   <param-value>
-      c:\apache-tomcat-9.0.31\webapps\data\
-   </param-value> 
-</context-param>
 </web-app>

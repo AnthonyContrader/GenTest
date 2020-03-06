@@ -78,7 +78,6 @@
 		<button type="submit">Insert</button>
 </form>
 </div>
-<br>
 <%@ include file="../css/footer.jsp" %>
 </body>
 </html>

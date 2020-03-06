@@ -9,6 +9,7 @@ public class Codes{
 	private String data_m;
 	private String data_i;
 	private String nome;
+	private String type_t;
 
 	
 	public Codes() {
@@ -16,17 +17,19 @@ public class Codes{
 	}
 
 	
-	public  Codes( String data_m, String data_i, String nome) {
+	public  Codes( String data_m, String data_i, String nome, String type_t) {
 		this.data_m = data_m;
 		this.nome = nome;
 		this.data_i = data_i;
+		this.type_t = type_t ;
 	}
 
-	public Codes (int id, String data_m, String data_i,  String nome) {
+	public Codes (int id, String data_m, String data_i,  String nome, String type_t) {
 		this.id = id;
 		this.data_m = data_m;
 		this.data_i = data_i;
-		this.nome = nome;		
+		this.nome = nome;	
+		this.type_t = type_t ;
 	}
 
 	
@@ -60,9 +63,15 @@ public class Codes{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+	public String getType_t() {
+		return this.type_t;
+	}
+	public void setType_t(String type_t) {
+		this.type_t = type_t;
+		
+	}
 	public String toString() {
-		return  id + "\t"  + nome + "\t\t" + data_i +"\t\t" + data_m;
+		return  id + "\t"  + nome + "\t\t" + data_i +"\t\t" + data_m +"\t\t"+type_t; 
 	}
 		
 		public boolean equals(Object obj) {

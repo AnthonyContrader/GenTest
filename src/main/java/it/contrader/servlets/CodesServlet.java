@@ -75,14 +75,15 @@ public class CodesServlet  extends HttpServlet{
 			Calendar data_ = Calendar.getInstance();
 			String data_i = f.format(data_.getTime()).toString();
 	        String data_m = f.format(data_.getTime()).toString(); 
-			dto = new CodesDTO ( data_m, data_i, nome);
+	        String type_t = request.getParameter("type_t").toString();
+			dto = new CodesDTO ( data_m, data_i, nome, type_t);
 			ans = service.insert(dto);
 			request.setAttribute("ans", ans);
 			updateList(request);
 			Part filePart = request.getPart("file"); 
 			nome = request.getParameter("nome").toString();			
 			InputStream filecontent = filePart.getInputStream();
-			File ciao = new File( "/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/"+cuser+"/"+nome+".java");
+			File ciao = new File("c:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/"+cuser+"/"+nome+".java");
 			FileUtils.copyInputStreamToFile(filecontent, ciao);
 			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);		
 			break;
@@ -92,8 +93,10 @@ public class CodesServlet  extends HttpServlet{
 			nome = request.getParameter("nome"); 
 			Calendar data__ = Calendar.getInstance();
 			data_m = f.format(data__.getTime()).toString();
+			type_t= request.getParameter("type_t");
+		
 			id = Integer.parseInt(request.getParameter("id"));
-			dto = new CodesDTO(id ,data_m, nome);
+			dto = new CodesDTO(id ,data_m, nome, type_t);
 			ans = service.update(dto);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);
@@ -103,7 +106,7 @@ public class CodesServlet  extends HttpServlet{
 			cuser = request.getSession().getAttribute("user").toString();
 			nome = request.getParameter("nome").toString();
 			id = Integer.parseInt(request.getParameter("id"));
-			ciao = new File( "/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/"+cuser+"/"+nome+".java");
+			ciao = new File("c:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/"+cuser+"/"+nome+".java");
 			ciao.delete();
 			ans = service.delete(id);
 			request.setAttribute("ans", ans);

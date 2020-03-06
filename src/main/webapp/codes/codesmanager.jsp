@@ -32,7 +32,7 @@
 			<th>Nome del codice</th>
 			<th>Data di inserimento</th>
 			<th>Data di ultima modifica</th>
-			<th>  </th>
+			<th>Tipologia del test</th>
 			
 			<th></th>
 			<th></th>
@@ -46,6 +46,7 @@
 			</a></td>
 			<td><%=u.getData_i()%></td>
 			<td><%=u.getData_m()%></td>
+			<td><%=u.getType_t() %></td>
 			<td><a href=CodesServlet?mode=read&update=true&id=<%=u.getId()%>>Edit</a>
 			</td>
 			<td><a href="CodesServlet?mode=delete&id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a>
@@ -63,8 +64,22 @@
 
       	<input type="text" id="nome" name="nome" placeholder="codes name">
 
-		<input type = "file" name = "file" size = "50"/>    </div>
+		<input type = "file" name = "file" size = "50"/>  
+		<div class="row">
+    <div class="col-25">
+      <label for="type">type_t</label>
+    </div>
+   		 <div class="col-75">
+ 			<select id="type_t" name="type_t">
+  				<option value="test1">Test1</option>
+  				<option value="test2">Test2</option>
+ 
+			</select>
+    	</div>
+  </div> 
+   </div>
   </div>
+  
       <button type="submit" >upload</button>
 </form>
 		
