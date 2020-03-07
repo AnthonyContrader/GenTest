@@ -41,7 +41,7 @@
 			for (CodesDTO u : list) {
 		%>
 		<tr>
-			<td><a href=UserServlet?mode=read&id=<%=u.getId()%>>
+			<td><a href=CodesServlet?mode=read&id=<%=u.getId()%>>
 					<%=u.getNome()%>
 			</a></td>
 			<td><%=u.getData_i()%></td>

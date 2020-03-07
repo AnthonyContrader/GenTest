@@ -16,8 +16,14 @@ import javax.servlet.annotation.MultipartConfig;
 import it.contrader.dto.CodesDTO;
 import it.contrader.service.Service;
 import it.contrader.service.CodesService;
-import it.contrader.dto.UserDTO;
-import it.contrader.servlets.LoginServlet;
+
+
+//import java.io.IOException;
+//import java.io.InputStream;
+//import java.nio.file.Files;
+//import java.nio.file.Path;
+//import java.util.Scanner;
+
 
 import org.apache.commons.io.FileUtils;
 
@@ -26,11 +32,14 @@ import org.apache.commons.io.FileUtils;
 @MultipartConfig
 public class CodesServlet  extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-	
+	String path = "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps";
 	public CodesServlet() {
-		
+	
 	}
-
+	/** public static String inputStreamToString(InputStream inputStream) {
+	        //In Java 9 use inputStream.readAllBytes()
+	        return new Scanner(inputStream,"UTF-8").useDelimiter("\\A").next();
+	    }**/
 	public void updateList(HttpServletRequest request) {
 		Service<CodesDTO> service = (Service<CodesDTO>) new CodesService();
 		List<CodesDTO> listDTO = service.getAll();
@@ -70,6 +79,7 @@ public class CodesServlet  extends HttpServlet{
 			break;
 			
 		case "INSERT":
+			
 			String cuser= request.getSession().getAttribute("user").toString();
 			String nome = request.getParameter("nome").toString();
 			Calendar data_ = Calendar.getInstance();
@@ -80,10 +90,25 @@ public class CodesServlet  extends HttpServlet{
 			ans = service.insert(dto);
 			request.setAttribute("ans", ans);
 			updateList(request);
+	
+		
+		/**Path path = Files.createTempFile("C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps", ".txt");
+			        Files.write(path, "uploaded file".getBytes());
+
+			        try (InputStream inputStream = Files.newInputStream(path)) {
+			            String s = inputStreamToString(inputStream);
+			            System.out.println(s);
+			        }**/
+			    
+
+			
+			
+
 			Part filePart = request.getPart("file"); 
 			nome = request.getParameter("nome").toString();			
 			InputStream filecontent = filePart.getInputStream();
-			File ciao = new File("c:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/"+cuser+"/"+nome+".java");
+			
+			File ciao = new File(path +cuser+"/"+nome);
 			FileUtils.copyInputStreamToFile(filecontent, ciao);
 			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);		
 			break;
@@ -106,7 +131,7 @@ public class CodesServlet  extends HttpServlet{
 			cuser = request.getSession().getAttribute("user").toString();
 			nome = request.getParameter("nome").toString();
 			id = Integer.parseInt(request.getParameter("id"));
-			ciao = new File("c:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/"+cuser+"/"+nome+".java");
+			ciao = new File(path +cuser+"/"+nome+".java");
 			ciao.delete();
 			ans = service.delete(id);
 			request.setAttribute("ans", ans);

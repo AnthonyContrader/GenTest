@@ -41,6 +41,8 @@ DROP TABLE IF EXISTS codes;
 /*!50503 SET character_set_client = utf8mb4 */; 
 CREATE TABLE codes ( 
   id int  NOT NULL AUTO_INCREMENT, 
+  nome varchar(30) DEFAULT NULL,
+  data_i varchar(30) DEFAULT NULL,
   data_m varchar(30) DEFAULT NULL, 
   type_t varchar(30) DEFAULT NULL,
   PRIMARY KEY (id) 
