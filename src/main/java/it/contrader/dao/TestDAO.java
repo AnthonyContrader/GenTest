@@ -10,9 +10,9 @@ import it.contrader.model.Test;
 
 public class TestDAO implements DAO<Test>{
     private final String QUERY_ALL = "SELECT * FROM test";
-    private final String QUERY_CREATE = "INSERT INTO test (data_m, data_i, nome , type_t) VALUES (?,?,?,?)";
+    private final String QUERY_CREATE = "INSERT INTO test (nome, data_i, data_m  , type_t) VALUES (?,?,?,?)";
     private final String QUERY_READ = "SELECT * FROM test WHERE id=?";
-    private final String QUERY_UPDATE = "UPDATE test SET data_m=? ,data_i=?, nome=?, type_t=? WHERE id=?";
+    private final String QUERY_UPDATE = "UPDATE test SET nome=? ,data_i=?, data_m=?, type_t=? WHERE id=?";
     private final String QUERY_DELETE = "DELETE FROM test WHERE id=?";
 
     public TestDAO() {}
@@ -31,7 +31,7 @@ public class TestDAO implements DAO<Test>{
                 String data_i = resultSet.getString("data_i");
                 String data_m = resultSet.getString("data_m");
                 String type_t = resultSet.getString("type_t");
-                test = new Test(data_i, data_m, nome , type_t);
+                test = new Test(nome, data_i, data_m , type_t);
                 test.setId(id);
                 testList.add(test);
             }
@@ -47,9 +47,9 @@ public class TestDAO implements DAO<Test>{
         Connection connection = ConnectionSingleton.getInstance();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(QUERY_CREATE);
-            preparedStatement.setString(1, testToInsert.getData_m());
+            preparedStatement.setString(3, testToInsert.getData_m());
             preparedStatement.setString(2, testToInsert.getData_i());
-            preparedStatement.setString(3, testToInsert.getNome());
+            preparedStatement.setString(1, testToInsert.getNome());
             preparedStatement.setString(4, testToInsert.getType_t());
 
             preparedStatement.execute();
@@ -101,9 +101,9 @@ public class TestDAO implements DAO<Test>{
 
 
                 PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);
-                preparedStatement.setString(1,  testToUpdate.getData_m());
+                preparedStatement.setString(3,  testToUpdate.getData_m());
                 preparedStatement.setString(2,  testToUpdate.getData_i());
-                preparedStatement.setString(3,  testToUpdate.getNome());
+                preparedStatement.setString(1,  testToUpdate.getNome());
                 preparedStatement.setString(4, testToUpdate.getType_t());
                 preparedStatement.setInt(5, testToUpdate.getId());
                 int a = preparedStatement.executeUpdate();

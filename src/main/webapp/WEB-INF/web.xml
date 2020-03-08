@@ -63,6 +63,16 @@
     <servlet-name>CodesServlet</servlet-name>
     <url-pattern>/CodesServlet</url-pattern>
   </servlet-mapping>
+<servlet>
+    <description></description>
+    <display-name>TestServlet</display-name>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>it.contrader.servlets.TestServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+</servlet-mapping>
 
   
 </web-app>

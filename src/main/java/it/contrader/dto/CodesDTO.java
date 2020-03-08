@@ -15,7 +15,7 @@ public class CodesDTO {
 		
 	}
 
-	public  CodesDTO( String data_m, String data_i, String nome , String type_t) {
+	public  CodesDTO( String nome, String data_i, String data_m , String type_t) {
 		this.data_m = data_m;
 		this.nome = nome;
 		this.data_i = data_i;
@@ -23,7 +23,7 @@ public class CodesDTO {
 	}
 	
 
-	public CodesDTO (int id, String data_m, String data_i, String nome, String type_t) {
+	public CodesDTO (int id, String nome, String data_i, String data_m, String type_t) {
 		this.id = id;
 		this.data_m = data_m;
 		this.data_i = data_i;
@@ -32,7 +32,7 @@ public class CodesDTO {
 	}
 
 	
-	public CodesDTO(int id, String data_m, String nome, String type_t ) {
+	public CodesDTO(int id, String nome, String data_m, String type_t ) {
 		this.id = id;
 		this.data_m = data_m;
 		this.nome = nome;

@@ -35,9 +35,9 @@
 		<th>Tipologia del test</th>
 	</tr>
 	<tr>
-		<td> <%=u.getData_m()%></td>
+		<td> <%=u.getNome()%></td>
 		<td> <%=u.getData_i()%></td>
-		<td><%=u.getNome()%></td>
+		<td><%=u.getData_m()%></td>
 		<td><%=u.getType_t()%></td>
 
 

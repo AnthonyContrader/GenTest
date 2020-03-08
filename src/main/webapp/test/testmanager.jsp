@@ -49,7 +49,7 @@
             <td><%=u.getData_i()%></td>
             <td><%=u.getData_m()%></td>
             <td><%=u.getType_t() %></td>
-            <td><a href="CodesServlet?mode=deletet&id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a>
+            <td><a href="TestServlet?mode=deletet&id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a>
             </td>
 
         </tr>

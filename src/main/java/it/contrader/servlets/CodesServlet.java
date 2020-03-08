@@ -92,9 +92,9 @@ public class CodesServlet  extends HttpServlet{
 			String nome = request.getParameter("nome").toString();
 			Calendar data_ = Calendar.getInstance();
 			String data_i = f.format(data_.getTime()).toString();
-	        String data_m = f.format(data_.getTime()).toString(); 
+	        String data_m = f.format(data_.getTime()).toString();
 	        String type_t = request.getParameter("type_t").toString();
-			dto = new CodesDTO ( data_m, data_i, nome, type_t);
+			dto = new CodesDTO ( nome, data_i, data_m, type_t);
 			ans = service.insert(dto);
 			request.setAttribute("ans", ans);
 			updateList(request);
@@ -104,23 +104,24 @@ public class CodesServlet  extends HttpServlet{
 			File ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/" +cuser+"/"+nome+".java");
 			FileUtils.copyInputStreamToFile(filecontent, ciao);
 			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);
 			break;
 
 		case "GENERATE":
 			cuser= request.getSession().getAttribute("user").toString();
 			nome = request.getParameter("nome").toString()+"TEST";
-			data_ = Calendar.getInstance();
-			data_i = f.format(data_.getTime()).toString();
-			data_m = f.format(data_.getTime()).toString();
+			Calendar dataa = Calendar.getInstance();
+			data_i = f.format(dataa.getTime()).toString();
+			data_m = f.format(dataa.getTime()).toString();
 			type_t = request.getParameter("type_t").toString();
-			dtot = new TestDTO ( data_m, data_i, nome, type_t);
+			dtot = new TestDTO ( nome, data_i, data_m , type_t);
 			anst = servicet.insert(dtot);
 			request.setAttribute("ans", anst);
 			//filePart = request.getPart("file");
-			nome = request.getParameter("nome").toString();
+			String nomee = request.getParameter("nome").toString();
 			//filecontent = filePart.getInputStream();
-			File origin = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/"+cuser+"/"+nome+".java");
-			ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/test/"+cuser+"/"+nome+"TEST"+".java");
+			File origin = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/"+cuser+"/"+nomee+".java");
+			ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/test/"+cuser+"/"+nomee+"TEST"+".java");
 			FileUtils.copyFile(origin, ciao);
 			updateListt(request);
 			getServletContext().getRequestDispatcher("/test/testmanager.jsp").forward(request, response);

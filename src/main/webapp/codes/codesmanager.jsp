@@ -53,7 +53,7 @@
 			</td>
 			<td><a href="CodesServlet?mode=delete&id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a>
 			</td>
-			<td><a href="CodesServlet?mode=generate&id=<%=u.getId()%>&nome=<%=u.getNome()%>&type_t=<%=u.getType_t()%>">Generate test</a>
+			<td><a href="TestServlet?mode=generate&id=<%=u.getId()%>&nome=<%=u.getNome()%>&type_t=<%=u.getType_t()%>">Generate test</a>
 			</td>
 
 		</tr>

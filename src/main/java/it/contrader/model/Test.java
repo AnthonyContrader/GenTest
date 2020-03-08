@@ -15,14 +15,14 @@ public class Test{
     }
 
 
-    public  Test( String data_m, String data_i, String nome, String type_t) {
+    public  Test( String nome, String data_i, String data_m, String type_t) {
         this.data_m = data_m;
         this.nome = nome;
         this.data_i = data_i;
         this.type_t = type_t ;
     }
 
-    public Test (int id, String data_m, String data_i,  String nome, String type_t) {
+    public Test (int id, String nome, String data_i,  String data_m, String type_t) {
         this.id = id;
         this.data_m = data_m;
         this.data_i = data_i;
