@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import ="it.contrader.dto.CodesDTO"%>
+<%@ page import="java.io.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,9 +13,13 @@
 
 <%@ include file="../css/header.jsp" %>
 <div class="navbar">
-  <a href="homeadmin.jsp">Home</a>
-  <a class="active"  href="CodesServlet?mode=codeslist">Codes</a>
-  <a href="LogoutServlet" id="logout">Logout</a>
+	<a href="homeadmin.jsp">Home</a>
+	<a href="UserServlet?mode=userlist">Users</a>
+	<a href="ProgettiServlet?mode=progettilist">Projects</a>
+	<a href="SupportServlet?mode=supportlist">Support</a>
+	<a class = "active" href="CodesServlet?mode=codeslist">Codes</a>
+	<a href="CodesServlet?mode=testlist">Test</a>
+	<a href="LogoutServlet" id="logout">Logout</a>
 </div>
 <br>
 
@@ -30,10 +35,12 @@
 		<th>Tipologia del test</th>
 	</tr>
 	<tr>
-		<td><%=u.getNome()%></td>
-		<td> <%=u.getData_i()%></td>
 		<td> <%=u.getData_m()%></td>
+		<td> <%=u.getData_i()%></td>
+		<td><%=u.getNome()%></td>
 		<td><%=u.getType_t()%></td>
+
+
 	</tr>	
 </table>
 

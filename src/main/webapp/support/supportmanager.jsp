@@ -15,10 +15,12 @@
 
 <div class="navbar">
 	<a href="homeadmin.jsp">Home</a>
-	<a  href="UserServlet?mode=userlist">Users</a>
-	<a href="ProgettiServlet?mode=progettilist"> Projects </a>
-	<a class="active" href="SupportServlet?mode=supportlist">Support</a>
-	<a href="LogoutServlet" id ="logout">Logout</a>
+	<a href="UserServlet?mode=userlist">Users</a>
+	<a href="ProgettiServlet?mode=progettilist">Projects</a>
+	<a class = "active" href="SupportServlet?mode=supportlist">Support</a>
+	<a href="CodesServlet?mode=codeslist">Codes</a>
+	<a href="CodesServlet?mode=testlist">Test</a>
+	<a href="LogoutServlet" id="logout">Logout</a>
 </div>
 <div class="main">
 

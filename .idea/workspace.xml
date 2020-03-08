@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JspApp:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f391f7ab-5bbc-4d5d-ba0c-1027a98a15be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/JspApp_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/JspApp_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_el_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_44.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_csv_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_servlet_api_7_0_47.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JspApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/contrader/model/Codes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/contrader/model/Codes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/contrader/servlets/CodesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/contrader/servlets/CodesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/contrader/servlets/ProgettiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/contrader/servlets/ProgettiServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/contrader/utils/ConnectionSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/contrader/utils/ConnectionSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/codes/codesmanager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/codes/codesmanager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/codes/readcodes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/codes/readcodes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/homeadmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homeadmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/progetti/progettimanager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progetti/progettimanager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/progetti/readprogetti.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progetti/readprogetti.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/progetti/updateprogetti.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progetti/updateprogetti.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/support/readsupport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/support/readsupport.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/support/supportmanager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/support/supportmanager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/support/updatesupport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/support/updatesupport.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/readuser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/readuser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/updateuser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/updateuser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/usermanager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/usermanager.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="BSP">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1YkmRqaZro91jqFO9k9Git9SDwX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tommy">
+    <configuration name="All in JspApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JspApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tommy" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="JspApp:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/JspApp_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_JspApp" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50455" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="JspApp:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_JspApp" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50455" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.All in JspApp" />
+      <item itemvalue="Tomcat Server.Tommy" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in JspApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f391f7ab-5bbc-4d5d-ba0c-1027a98a15be" name="Default Changelist" comment="" />
+      <created>1583494960260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583494960260</updated>
+      <workItem from="1583494964132" duration="2780000" />
+      <workItem from="1583595105787" duration="279000" />
+      <workItem from="1583595406571" duration="14137000" />
+      <workItem from="1583668729692" duration="2531000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="338" y="294" key="#SQL_Dialects" timestamp="1583598138286">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="338" y="294" key="#SQL_Dialects/0.0.1920.1200@0.0.1920.1200" timestamp="1583598138286" />
+    <state x="738" y="473" key="#Tomcat_Server" timestamp="1583495531042">
+      <screen x="0" y="23" width="1920" height="1131" />
+    </state>
+    <state x="738" y="473" key="#Tomcat_Server/0.23.1920.1131@0.23.1920.1131" timestamp="1583495531042" />
+    <state x="424" y="241" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583598817915">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="424" y="241" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1583598817915" />
+    <state x="424" y="250" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1131@0.23.1920.1131" timestamp="1583495638233" />
+    <state x="706" y="464" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1583595091340">
+      <screen x="0" y="23" width="1920" height="1131" />
+    </state>
+    <state x="706" y="464" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1920.1131@0.23.1920.1131" timestamp="1583595091340" />
+    <state width="1294" height="338" key="GridCell.Tab.0.bottom" timestamp="1583673597439">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597439" />
+    <state width="1294" height="338" key="GridCell.Tab.0.bottom/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284949" />
+    <state width="1294" height="338" key="GridCell.Tab.0.center" timestamp="1583673597438">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597438" />
+    <state width="1294" height="338" key="GridCell.Tab.0.center/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284948" />
+    <state width="1294" height="338" key="GridCell.Tab.0.left" timestamp="1583673597438">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597438" />
+    <state width="1294" height="338" key="GridCell.Tab.0.left/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284947" />
+    <state width="1294" height="338" key="GridCell.Tab.0.right" timestamp="1583673597439">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597439" />
+    <state width="1294" height="338" key="GridCell.Tab.0.right/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284948" />
+    <state width="1294" height="338" key="GridCell.Tab.1.bottom" timestamp="1583673597442">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597442" />
+    <state width="1294" height="338" key="GridCell.Tab.1.bottom/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284803" />
+    <state width="1294" height="338" key="GridCell.Tab.1.center" timestamp="1583673597442">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.1.center/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597442" />
+    <state width="1294" height="338" key="GridCell.Tab.1.center/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284803" />
+    <state width="1294" height="338" key="GridCell.Tab.1.left" timestamp="1583673597441">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.1.left/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597441" />
+    <state width="1294" height="338" key="GridCell.Tab.1.left/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284802" />
+    <state width="1294" height="338" key="GridCell.Tab.1.right" timestamp="1583673597442">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597442" />
+    <state width="1294" height="338" key="GridCell.Tab.1.right/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284803" />
+    <state width="1294" height="338" key="GridCell.Tab.2.bottom" timestamp="1583673597441">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.2.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597441" />
+    <state width="1294" height="338" key="GridCell.Tab.2.bottom/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284802" />
+    <state width="1294" height="338" key="GridCell.Tab.2.center" timestamp="1583673597440">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.2.center/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597440" />
+    <state width="1294" height="338" key="GridCell.Tab.2.center/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284801" />
+    <state width="1294" height="338" key="GridCell.Tab.2.left" timestamp="1583673597440">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.2.left/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597440" />
+    <state width="1294" height="338" key="GridCell.Tab.2.left/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284801" />
+    <state width="1294" height="338" key="GridCell.Tab.2.right" timestamp="1583673597440">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1294" height="338" key="GridCell.Tab.2.right/0.0.1920.1200@0.0.1920.1200" timestamp="1583673597440" />
+    <state width="1294" height="338" key="GridCell.Tab.2.right/0.23.1920.1131@0.23.1920.1131" timestamp="1583671284801" />
+    <state x="498" y="250" key="Maven.ArtifactSearchDialog" timestamp="1583495100980">
+      <screen x="0" y="23" width="1920" height="1131" />
+    </state>
+    <state x="498" y="250" key="Maven.ArtifactSearchDialog/0.23.1920.1131@0.23.1920.1131" timestamp="1583495100980" />
+    <state x="795" y="159" key="SettingsEditor" timestamp="1583668907251">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="795" y="159" key="SettingsEditor/0.0.1920.1200@0.0.1920.1200" timestamp="1583668907251" />
+    <state x="795" y="173" key="SettingsEditor/0.23.1920.1131@0.23.1920.1131" timestamp="1583668673963" />
+    <state x="866" y="494" width="342" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1583598900400">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="866" y="494" width="342" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1200@0.0.1920.1200" timestamp="1583598900400" />
+    <state x="835" y="341" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1583598923478">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="835" y="341" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1583598923478" />
+    <state x="744" y="224" key="refactoring.ChangeSignatureDialog" timestamp="1583661528696">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="744" y="224" key="refactoring.ChangeSignatureDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1583661528696" />
+  </component>
+</project>

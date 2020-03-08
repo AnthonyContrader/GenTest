@@ -66,6 +66,16 @@
             <artifactId>commons-csv</artifactId>
             <version>1.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>7.0.47</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>7.0.47</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>JspApp</finalName>

@@ -14,11 +14,13 @@
 <%@ include file="../css/header.jsp" %>
 
 <div class="navbar">
-  <a  href="homeadmin.jsp">Home</a>
-  <a class="active" href="UserServlet?mode=userlist">Users</a>
-  <a  href="ProgettiServlet?mode=progettilist">Projects</a>
-  <a href="SupportServlet?mode=supportlist">Support</a>
-  <a href="LogoutServlet" id="logout">Logout</a>
+	<a href="homeadmin.jsp">Home</a>
+	<a href="UserServlet?mode=userlist">Users</a>
+	<a href="ProgettiServlet?mode=progettilist">Projects</a>
+	<a href="SupportServlet?mode=supportlist">Support</a>
+	<a class = "active" href="CodesServlet?mode=codeslist">Codes</a>
+	<a href="CodesServlet?mode=testlist">Test</a>
+	<a href="LogoutServlet" id="logout">Logout</a>
 </div>
 <div class="main">
 	<%
@@ -51,6 +53,8 @@
 			</td>
 			<td><a href="CodesServlet?mode=delete&id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a>
 			</td>
+			<td><a href="CodesServlet?mode=generate&id=<%=u.getId()%>&nome=<%=u.getNome()%>&type_t=<%=u.getType_t()%>">Generate test</a>
+			</td>
 
 		</tr>
 		<%
@@ -67,7 +71,7 @@
 		<input type = "file" name = "file" size = "50"/>  
 		<div class="row">
     <div class="col-25">
-      <label for="type">type_t</label>
+
     </div>
    		 <div class="col-75">
  			<select id="type_t" name="type_t">
@@ -79,7 +83,6 @@
   </div> 
    </div>
   </div>
-  
       <button type="submit" >upload</button>
 </form>
 		

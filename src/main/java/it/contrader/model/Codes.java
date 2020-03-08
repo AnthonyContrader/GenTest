@@ -1,6 +1,6 @@
 package it.contrader.model;
 
-import java.io.InputStream;
+
 
 public class Codes{
 

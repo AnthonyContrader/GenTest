@@ -34,7 +34,9 @@ public class ProgettiServlet  extends HttpServlet{
 		request.setAttribute("list", listDTO);
 		
 	}
-	
+
+
+
 
 	@Override 
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

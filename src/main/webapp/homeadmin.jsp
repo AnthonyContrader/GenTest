@@ -17,6 +17,7 @@
   <a href="ProgettiServlet?mode=progettilist">Projects</a>
   <a href="SupportServlet?mode=supportlist">Support</a>
   <a href="CodesServlet?mode=codeslist">Codes</a>
+  <a href="CodesServlet?mode=testlist">Test</a>
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 
