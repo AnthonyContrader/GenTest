@@ -87,7 +87,7 @@ public class TestServlet  extends HttpServlet{
                 //filePart = request.getPart("file");
                 String nomee = request.getParameter("nome").toString();
                 //filecontent = filePart.getInputStream();
-                File origin = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/"+cuser+"/"+nomee+".java");
+                File origin = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/codes/"+cuser+"/"+nomee+".java");
                 File ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/test/"+cuser+"/"+nomee+"TEST"+".java");
                 FileUtils.copyFile(origin, ciao);
                 updateListt(request);

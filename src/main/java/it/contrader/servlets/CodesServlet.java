@@ -101,7 +101,7 @@ public class CodesServlet  extends HttpServlet{
 			Part filePart = request.getPart("file"); 
 			nome = request.getParameter("nome").toString();			
 			InputStream filecontent = filePart.getInputStream();
-			File ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/" +cuser+"/"+nome+".java");
+			File ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/codes/" +cuser+"/"+nome+".java");
 			FileUtils.copyInputStreamToFile(filecontent, ciao);
 			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);
 			getServletContext().getRequestDispatcher("/codes/codesmanager.jsp").forward(request, response);
@@ -144,7 +144,7 @@ public class CodesServlet  extends HttpServlet{
 			cuser = request.getSession().getAttribute("user").toString();
 			nome = request.getParameter("nome").toString();
 			id = Integer.parseInt(request.getParameter("id"));
-			ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/" +cuser+"/"+nome+".java");
+			ciao = new File("/Users/samirhysa/eclipse/jee-2019-12/apache-tomcat-9.0.31/webapps/codes/" +cuser+"/"+nome+".java");
 			ciao.delete();
 			ans = service.delete(id);
 			request.setAttribute("ans", ans);
