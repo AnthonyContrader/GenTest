@@ -1,5 +1,7 @@
 package it.contrader.service;
 
+import it.contrader.dto.UserDTO;
+
 import java.util.List;
 
 public interface ServiceDTO<DTO> {
@@ -8,7 +10,7 @@ public interface ServiceDTO<DTO> {
 
 	public DTO read(long id);
 
-	public DTO insert(DTO dto);
+	public DTO insert(UserDTO dto);
 
 	public DTO update(DTO dto);
 

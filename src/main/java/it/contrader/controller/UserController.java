@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import it.contrader.dto.UserDTO;
-import it.contrader.model.User.Usertype;
 import it.contrader.service.UserService;
 
 @Controller
@@ -29,10 +28,10 @@ public class UserController {
 
 		switch (userDTO.getUsertype()) {
 
-		case ADMIN:
+		case "ADMIN":
 			return "homeadmin";
 
-		case USER:
+		case "USER":
 			return "index";
 
 		default:
@@ -60,23 +59,23 @@ public class UserController {
 	}
 
 	@PostMapping("/update")
-	public String update(HttpServletRequest request, @RequestParam("id") Long id, @RequestParam("username") String username,
-			@RequestParam("password") String password, @RequestParam("usertype") Usertype usertype) {
+		public String update(HttpServletRequest request, @RequestParam("id") Long id, @RequestParam("username") String username,
+				@RequestParam("password") String password, @RequestParam("usertype") String usertype) {
 
-		UserDTO dto = new UserDTO();
-		dto.setId(id);
-		dto.setUsername(username);
-		dto.setPassword(password);
-		dto.setUsertype(usertype);
-		service.update(dto);
-		setAll(request);
-		return "users";
+			UserDTO dto = new UserDTO();
+			dto.setId(id);
+			dto.setUsername(username);
+			dto.setPassword(password);
+			dto.setUsertype(usertype);
+			service.update(dto);
+			setAll(request);
+			return "users";
 
 	}
 
 	@PostMapping("/insert")
 	public String insert(HttpServletRequest request, @RequestParam("username") String username,
-			@RequestParam("password") String password, @RequestParam("usertype") Usertype usertype) {
+			@RequestParam("password") String password, @RequestParam("usertype") String usertype) {
 		UserDTO dto = new UserDTO();
 		dto.setUsername(username);
 		dto.setPassword(password);

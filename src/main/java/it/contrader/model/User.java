@@ -16,9 +16,6 @@ import lombok.NoArgsConstructor;
 @Entity
 public class User {
 
-	public enum Usertype {
-		ADMIN, USER
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +26,6 @@ public class User {
 
 	private String password;
 
-	private Usertype usertype;
+	private String usertype;
 
 }
