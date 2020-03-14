@@ -15,6 +15,7 @@
 
 <div class="navbar">
     <a href="/homeadmin.jsp">Home</a>
+    <a href="/user/getall">User</a>
     <a class="active" href="/codes/getall">Codes</a>
     <a href="/user/logout" id="logout">Logout</a>
 </div>
@@ -27,26 +28,26 @@
 
     <table>
         <tr>
-            <th>nome</th>
-            <th>Data_i</th>
-            <th>Data_m</th>
-            <th></th>
+            <th>nome del codice</th>
+            <th>Data inserimento</th>
+            <th>Data modifica</th>
+            <th>Tipo del test</th>
+            <th>Nome del relativo test</th>
             <th></th>
         </tr>
         <%
             for (CodesDTO u : list) {
         %>
         <tr>
-            <td><a href="/codes/read?id=<%=u.getId()%>"> <%=u.getNome()%>
+            <td><a href="/codes/read?id=<%=u.getId()%>">
+                <%=u.getNome()%>
             </a></td>
             <td><%=u.getData_i()%></td>
             <td><%=u.getData_m()%></td>
             <td><%=u.getType_t()%></td>
             <td><%=u.getTest()%></td>
-            <td><a href="/user/preupdate?id=<%=u.getId()%>">Edit</a></td>
 
-
-            <td><a href="/user/delete?id=<%=u.getId()%>">Delete</a></td>
+            <td><a href="/codes/delete?id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a></td>
 
         </tr>
         <%
@@ -56,7 +57,7 @@
 
 
 
-    <form id="floatright" action="/codes/insert" method="post">
+    <form id="floatright" action="/codes/insert" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-25">
                 <label for="codes">Nome</label>
@@ -66,7 +67,7 @@
                        placeholder="inserisci nome">
             </div>
         </div>
-
+        <input type = "file" name = "file" size = "50"/>
         <div class="row">
             <div class="col-25">
                 <label for="type">test type</label>
