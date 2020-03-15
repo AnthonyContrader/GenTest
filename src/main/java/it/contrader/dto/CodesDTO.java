@@ -17,6 +17,5 @@ public class CodesDTO {
     private String nome;
     private String data_i;
     private String data_m;
-    private String type_t;
-    private Test test;
+
 }

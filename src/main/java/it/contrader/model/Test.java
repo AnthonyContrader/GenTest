@@ -4,6 +4,7 @@ import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 
 
 @AllArgsConstructor
@@ -21,13 +22,10 @@ public class Test {
     private String nome;
     private String data_i;
     private String data_m;
+    private String type_t;
 
-    @OneToOne(mappedBy = "test")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(unique = true)
     private Codes codes;
-
-    public Test(String nome){
-        this.nome = nome;
-    }
-
 }
 

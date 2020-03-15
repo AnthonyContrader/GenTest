@@ -1,6 +1,6 @@
 package it.contrader.dto;
 
-import it.contrader.model.Test;
+import it.contrader.model.Codes;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,5 +17,7 @@ public class TestDTO {
     private String nome;
     private String data_i;
     private String data_m;
-    private Test test;
+    private String type_t;
+    private Codes codes;
+
 }

@@ -2,13 +2,11 @@ package it.contrader.service;
 
 import java.util.List;
 
-import it.contrader.dto.CodesDTO;
-import it.contrader.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
+import it.contrader.service.ServiceDTO;
 import it.contrader.converter.Converter;
-
 
 @Service
 public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
@@ -22,11 +20,8 @@ public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
 	}
 
 	@Override
-	public DTO insert(UserDTO dto) {
-		return converter.toDTO(crudRepository.save(converter.toEntity((DTO) dto)));
-	}
-	public DTO insertc(CodesDTO dto) {
-		return converter.toDTO(crudRepository.save(converter.toEntity((DTO) dto)));
+	public DTO insert(DTO dto) {
+		return converter.toDTO(crudRepository.save(converter.toEntity(dto)));
 	}
 
 	@Override

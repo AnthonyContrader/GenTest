@@ -25,17 +25,5 @@ public class Codes {
     private String nome;
     private String data_i;
     private String data_m;
-    private String type_t;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(unique = true)
-    private Test test;
-
-    public Codes(String nome, Test test){
-
-        this.nome = nome;
-        this.test = test;
-        this.test.setCodes(this);
-    }
 
 }

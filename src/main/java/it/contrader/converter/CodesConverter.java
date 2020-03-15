@@ -15,7 +15,7 @@ public class CodesConverter extends AbstractConverter<Codes, CodesDTO> {
     public Codes toEntity(CodesDTO codesDTO) {
         Codes codes = null;
         if (codesDTO != null) {
-            codes = new Codes(codesDTO.getId(), codesDTO.getNome(), codesDTO.getData_i(), codesDTO.getData_m(), codesDTO.getType_t(), codesDTO.getTest());
+            codes = new Codes(codesDTO.getId(), codesDTO.getNome(), codesDTO.getData_i(), codesDTO.getData_m());
         }
         return codes;
     }
@@ -24,7 +24,7 @@ public class CodesConverter extends AbstractConverter<Codes, CodesDTO> {
     public CodesDTO toDTO(Codes codes) {
         CodesDTO codesDTO = null;
         if (codes != null) {
-            codesDTO = new CodesDTO(codes.getId(), codes.getNome(), codes.getData_i(), codes.getData_m(), codes.getType_t(), codes.getTest());
+            codesDTO = new CodesDTO(codes.getId(), codes.getNome(), codes.getData_i(), codes.getData_m());
 
         }
         return codesDTO;

@@ -32,7 +32,6 @@
             <th>Data inserimento</th>
             <th>Data modifica</th>
             <th>Tipo del test</th>
-            <th>Nome del relativo test</th>
             <th></th>
         </tr>
         <%
@@ -44,9 +43,6 @@
             </a></td>
             <td><%=u.getData_i()%></td>
             <td><%=u.getData_m()%></td>
-            <td><%=u.getType_t()%></td>
-            <td><%=u.getTest()%></td>
-
             <td><a href="/codes/delete?id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a></td>
 
         </tr>
@@ -54,7 +50,6 @@
             }
         %>
     </table>
-
 
 
     <form id="floatright" action="/codes/insert" method="post" enctype="multipart/form-data">
@@ -71,13 +66,6 @@
         <div class="row">
             <div class="col-25">
                 <label for="type">test type</label>
-            </div>
-            <div class="col-75">
-                <select id="type" name="type_t">
-                    <option value="test 1">test1</option>
-                    <option value="test 2">test2</option>
-
-                </select>
             </div>
         </div>
         <button type="submit">Insert</button>
