@@ -37,7 +37,7 @@
 				<th>Nome</th>
 				<th>Data inserimento</th>
 				<th>Data modifica</th>
-				<th>Proprietario</th>
+
 				<th></th>
 				<th></th>
 			</tr>
@@ -49,7 +49,7 @@
 				</a></td>
 				<td><%=u.getData_i()%></td>
 				<td><%=u.getData_m()%></td>
-				<td><%=u.getUser() %></td>
+
 				<td><a href="/progetti/preupdate?id=<%=u.getId()%>">Edit</a></td>
 
 

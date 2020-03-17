@@ -1,6 +1,10 @@
 package it.contrader.controller;
 import it.contrader.dto.CodesDTO;
+import it.contrader.dto.ProgettiDTO;
+import it.contrader.model.Codes;
+import it.contrader.model.Progetti;
 import it.contrader.service.CodesService;
+import it.contrader.service.ProgettiService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +21,8 @@ import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Controller
@@ -27,6 +32,9 @@ public class CodesController {
 
     @Autowired
     private CodesService service;
+
+    @Autowired
+    private ProgettiService servicep;
 
     @GetMapping("/getall")
     public String getAll(HttpServletRequest request) {
@@ -51,19 +59,20 @@ public class CodesController {
     }
 
     @PostMapping("/insert")
-    public String insert(HttpServletRequest request, @RequestParam("nome") String nome) throws IOException, ServletException {
+    public String insert(HttpServletRequest request, @RequestParam("nome") String nome, @RequestParam("ProgettiName") Progetti progetti) throws IOException, ServletException {
 
         String cuser= request.getSession().getAttribute("user").toString();
         Calendar data_ = Calendar.getInstance();
         String data_i = f.format(data_.getTime()).toString();
         String data_m = f.format(data_.getTime()).toString();
         CodesDTO dto = new CodesDTO();
+        ProgettiDTO dtop = new ProgettiDTO();
         dto.setNome(nome);
         dto.setData_i(data_i);
         dto.setData_m(data_m);
+        dto.setProgetti(progetti);
         service.insert(dto);
         setAll(request);
-
         Part filePart = request.getPart("file");
         nome = request.getParameter("nome").toString();
         InputStream filecontent = filePart.getInputStream();
@@ -80,5 +89,6 @@ public class CodesController {
 
     private void setAll(HttpServletRequest request) {
         request.getSession().setAttribute("list", service.getAll());
+        request.getSession().setAttribute("listp", servicep.getAll());
     }
 }

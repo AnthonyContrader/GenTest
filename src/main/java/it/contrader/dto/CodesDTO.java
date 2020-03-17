@@ -1,5 +1,6 @@
 package it.contrader.dto;
 
+import it.contrader.model.Progetti;
 import it.contrader.model.Test;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +18,6 @@ public class CodesDTO {
     private String nome;
     private String data_i;
     private String data_m;
+    private Progetti progetti;
 
 }

@@ -26,4 +26,7 @@ public class Codes {
     private String data_i;
     private String data_m;
 
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Progetti progetti;
 }

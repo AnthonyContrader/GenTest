@@ -1,5 +1,6 @@
 <%@ page  import="java.util.*"%>
 <%@ page import="it.contrader.dto.CodesDTO" %>
+<%@ page import="it.contrader.dto.ProgettiDTO" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -25,6 +26,7 @@
 <div class="main">
     <%
         List<CodesDTO> list = (List<CodesDTO>) request.getSession().getAttribute("list");
+        List<ProgettiDTO> listp = (List<ProgettiDTO>) request.getSession().getAttribute("listp");
     %>
 
     <br>
@@ -34,7 +36,7 @@
             <th>nome del codice</th>
             <th>Data inserimento</th>
             <th>Data modifica</th>
-            <th>Tipo del test</th>
+            <th>Nome del progetto</th>
             <th></th>
         </tr>
         <%
@@ -46,6 +48,7 @@
             </a></td>
             <td><%=u.getData_i()%></td>
             <td><%=u.getData_m()%></td>
+            <td><%=u.getProgetti().getNome()%></td>
             <td><a href="/codes/delete?id=<%=u.getId()%>&nome=<%=u.getNome()%>">Delete</a></td>
 
         </tr>
@@ -66,6 +69,17 @@
             </div>
         </div>
         <input type = "file" name = "file" size = "50"/>
+        <select id="codes" name="ProgettiName" required>
+            <option value="" disabled selected>Choose your option</option>
+            <%
+                for (ProgettiDTO o : listp) {
+            %>
+            <option value="<%=o.getId()%>"><%=o.getNome()%></option>
+            <%
+                }
+            %>
+
+        </select>
         <button type="submit">Insert</button>
     </form>
 

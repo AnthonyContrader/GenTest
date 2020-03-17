@@ -12,7 +12,7 @@ public class ProgettiConverter extends AbstractConverter<Progetti,ProgettiDTO> {
 		
 		Progetti progetti=null;
 		if(progettiDTO!=null) {
-			progetti=new Progetti(progettiDTO.getId(),progettiDTO.getNome(),progettiDTO.getData_i(),progettiDTO.getData_m(),null);
+			progetti=new Progetti(progettiDTO.getId(),progettiDTO.getNome(),progettiDTO.getData_i(),progettiDTO.getData_m(),progettiDTO.getCodes());
 			
 		}
 		return progetti;
@@ -21,7 +21,7 @@ public class ProgettiConverter extends AbstractConverter<Progetti,ProgettiDTO> {
 	public ProgettiDTO toDTO(Progetti progetti) {
 		ProgettiDTO progettiDTO = null;
 		if(progetti != null) {
-			progettiDTO = new ProgettiDTO(progetti.getId(),progetti.getNome(),progetti.getData_i(),progetti.getData_m(),null);
+			progettiDTO = new ProgettiDTO(progetti.getId(),progetti.getNome(),progetti.getData_i(),progetti.getData_m(), progetti.getCodes());
 		}
 		return progettiDTO;
 	}

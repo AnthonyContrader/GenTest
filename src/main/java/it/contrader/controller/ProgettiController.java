@@ -49,7 +49,6 @@ public class ProgettiController {
 		dto.setNome(nome);
 		dto.setData_i(data_i);
 		dto.setData_m(data_m);
-		dto.setUser(null);
 		service.insert(dto);
 		setAll(request);
 		return "progetti";
@@ -66,7 +65,6 @@ public class ProgettiController {
 		dto.setNome(nome);
 		dto.setData_i(data_i);
 		dto.setData_m(data_m);
-		dto.setUser(null);
 		service.update(dto);
 		setAll(request);
 		return "progetti";

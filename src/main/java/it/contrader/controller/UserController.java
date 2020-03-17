@@ -1,18 +1,13 @@
 package it.contrader.controller;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.*;
 import it.contrader.dto.UserDTO;
 import it.contrader.service.UserService;
 
-@Controller
+@RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/user")
 public class UserController {
 
@@ -20,23 +15,8 @@ public class UserController {
 	private UserService service;
 
 	@PostMapping("/login")
-	public String login(HttpServletRequest request, @RequestParam(value = "username", required = true) String username,
-			@RequestParam(value = "password", required = true) String password) {
-
-		UserDTO userDTO = service.findByUsernameAndPassword(username, password);
-		request.getSession().setAttribute("user", userDTO);
-
-		switch (userDTO.getUsertype()) {
-
-		case "ADMIN":
-			return "homeadmin";
-
-		case "USER":
-			return "index";
-
-		default:
-			return "index";
-		}
+	public UserDTO login(@RequestBody UserDTO userDTO) {
+		return service.findByUsernameAndPassword(userDTO.getUsername(), userDTO.getPassword());
 	}
 
 	@GetMapping("/getall")

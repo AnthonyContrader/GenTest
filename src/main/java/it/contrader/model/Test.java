@@ -24,7 +24,7 @@ public class Test {
     private String data_m;
     private String type_t;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(unique = true)
     private Codes codes;
 }
