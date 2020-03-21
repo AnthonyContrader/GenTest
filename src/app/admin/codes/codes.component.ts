@@ -1,7 +1,7 @@
-import {Component, Inject, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {CodesDTO} from '../../../dto/codesdto';
 import {CodesService} from '../../../service/codes.service';
-
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-codes',
@@ -13,15 +13,44 @@ export class CodesComponent implements OnInit {
   codess: CodesDTO[];
   codestoinsert: CodesDTO = new CodesDTO();
   @ViewChild('editor') editor;
-  text = '';
-  constructor(private service: CodesService,) { }
+  file: any;
+  text: string
 
+  constructor(private service: CodesService, private http: HttpClient) {
+  }
+  fileString: any = "";
+
+  uploadDocument(file) {
+    this.file = file;
+    let fileReader = new FileReader();
+    fileReader.onloadend = (e) => {
+      //console.log(myReader.result);
+      // Entire file
+      console.log(fileReader.result);
+
+      this.fileString = fileReader.result;
+    };
+
+    fileReader.readAsText(this.file);
+  }
+  readf(){
+    this.editor.setText(this.fileString)
+  }
+
+  uintToString(uintArray) {
+    var encodedString = String.fromCharCode.apply(null, uintArray);
+    return decodeURIComponent(escape(encodedString));
+  }
   ngAfterViewInit() {
-    this.editor.setTheme('monokai');
+    this.editor.setTheme('eclipse');
     this.editor.setMode('java');
+    this.editor.resize();
     this.editor.getEditor().setOptions({
       enableBasicAutocompletion: true
     });
+  }
+  fileChanged(e) {
+    this.file = e.target.files[0];
   }
   ngOnInit() {
     this.getCodes();

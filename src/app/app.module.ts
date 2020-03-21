@@ -10,13 +10,15 @@ import { AdminModule } from './admin/admin.module';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { DioComponent } from './dio/dio.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DioComponent
   ],
   imports: [
     BrowserModule,

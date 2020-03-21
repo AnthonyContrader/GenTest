@@ -54,12 +54,12 @@
             <button (click)="delete(codes)">Delete</button>
           </td>
           <td>
-            <div class="form-group">
-              <label for="file">Choose File</label>
-              <input type="file"
-                     id="file"
-                     (change)="handleFileInput($event.target.files)">
+            <div class="Block">
+              <label id="lbl">Code </label>
+              <input type='file' (change)="fileChanged($event)">
             </div>
+            <button (click)="uploadDocument(file)">upload</button>
+            <button (click)="readf()">leggi</button>
           </td>
         </tr>
       </table>
@@ -72,7 +72,7 @@
 <ace-editor
         [(text)]="text"
         #editor
-        style="height:400px;">
+        style="height:4000px;">
 </ace-editor>
 </div>
 </perfect-scrollbar>

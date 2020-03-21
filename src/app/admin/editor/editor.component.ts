@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import 'brace';
 import 'brace/mode/java';
-import 'brace/theme/monokai';
+import 'brace/theme/eclipse';
 
 @Component({
   selector: 'app-editor',
@@ -13,7 +13,7 @@ export class EditorComponent {
   text = '';
 
   ngAfterViewInit() {
-    this.editor.setTheme('monokai');
+    this.editor.setTheme('eclipse');
     this.editor.setMode('java');
     this.editor.getEditor().setOptions({
         enableBasicAutocompletion: true

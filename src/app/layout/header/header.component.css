@@ -1,6 +1,6 @@
 
 #header{
-    background-color: darkorange;
+    background-color: #ffffff;
 }
 .searchContainer {
     margin-top: 10px;
@@ -14,43 +14,43 @@
     overflow: hidden;
   background-color: white;
   }
-  
-  
+
+
   .searchIcon {
     padding: 0.5rem;
     z-index:2;
-    background-color: white;
+    background-color: rgba(64, 64, 64, 0.17);
   }
-  
+
   .searchBox {
     border: 0;
     padding: 0.5rem;
     background-color: white;
     font-size: 12px;
   }
-  
+
   .searchButton {
       height: 70%;
       margin-top:7px;
     background: white;
-    border: 2px solid darkorange;
-    color: darkorange;
+    border: 2px solid #343434;
+    color: #000000;
     border-radius: 15px;
-  
+
   }
-  
+
   p{
       font-size: 19px;
-      color: #f1f1f1;
+      color: #000000;
       margin-left: 0px;
       padding-left: 5px;
       padding-top: 12px;
       height: inherit;
       width: 100%;
-      background-color: #1e282d !important;
+      background-color: #ffffff !important;
   }
-  
+
   i:hover{
-    background-color: crimson;
+    background-color: #ffffff;
 
   }

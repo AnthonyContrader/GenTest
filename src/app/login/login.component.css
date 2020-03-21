@@ -3,7 +3,7 @@ form{
     width: 55%;
     padding: 10px;
     border-radius:0;
-    border-color: crimson;
+    border-color: #dc143c;
 }
 
 img{
@@ -14,32 +14,32 @@ img{
 
 input, input:hover, input::selection, input:checked, input:focus{
     border: 0;
-    background-color: darkorange;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 0;
-    color: white;
-    border-bottom: 1px solid crimson;
-    margin: 0px; 
+    color: #000000;
+    border-bottom: 1px solid #dc143c;
+    margin: 0px;
 }
 
 .container-fluid{
-    background-color: darkorange;
+    background-color: rgba(255, 255, 255, 0);
     height: 100vh;
 }
 input::placeholder{
-    color: white;
+    color: #000000;
 }
 .form-control{
 border: none;
-background-color: darkorange;
-color: white;
-border-bottom: 1px solid white;
+background-color: rgba(255, 255, 255, 0);
+color: #000000;
+border-bottom: 1px solid #ff0000;
 }
 
 .login{
 border: none;
-background-color: darkorange;
-color: white;
-border: 1px solid white;
+background-color: #000000;
+color: #000000;
+border: 1px solid #ffffff;
 border-radius: 2px;
 padding-top: 10px;
 padding-right: auto;
@@ -49,5 +49,5 @@ padding-left: auto;
 
 p{
 font-size: 14px;
-color: white;
+color: #000000;
 }
