@@ -1,0 +1,78 @@
+<perfect-scrollbar>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <td>
+            <input placeholder="nome del codice" [(ngModel)]="codestoinsert.nome">
+          </td>
+          <td>
+            <button (click)="insertcodes(codestoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>
+            Nome del progetto
+          </th>
+          <th>
+            Data di inserimento
+          </th>
+          <th>
+            data di modifica
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Delete
+          </th>
+          <th>
+            Upload the file
+          </th>
+        </tr>
+        <tr *ngFor="let codes of codess">
+          <td>
+            <input [(ngModel)]="codes.nome">
+          </td>
+          <td>
+            {{codes.data_i}}
+          </td>
+          <td>
+            {{codes.data_m}}
+          </td>
+          <td>
+            <button (click)="update(codes)">Save</button>
+          <td>
+            <button (click)="delete(codes)">Delete</button>
+          </td>
+          <td>
+            <div class="form-group">
+              <label for="file">Choose File</label>
+              <input type="file"
+                     id="file"
+                     (change)="handleFileInput($event.target.files)">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</div>
+<div>
+<ace-editor
+        [(text)]="text"
+        #editor
+        style="height:400px;">
+</ace-editor>
+</div>
+</perfect-scrollbar>
