@@ -8,7 +8,7 @@ package it.contrader.service;
  *
  * @param <DTO>
  * 
- * @see AbstractService.
+ * @see AbstractService
  */
 public interface ServiceDTO<DTO> {
 	
