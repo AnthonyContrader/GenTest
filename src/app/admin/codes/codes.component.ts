@@ -20,28 +20,9 @@ export class CodesComponent implements OnInit {
   }
   fileString: any = "";
 
-  uploadDocument(file) {
-    this.file = file;
-    let fileReader = new FileReader();
-    fileReader.onloadend = (e) => {
-      //console.log(myReader.result);
-      // Entire file
-      console.log(fileReader.result);
 
-      this.fileString = fileReader.result;
-    };
-
-    fileReader.readAsText(this.file);
-  }
-  readf(){
-    this.editor.setText(this.fileString)
-  }
-
-  uintToString(uintArray) {
-    var encodedString = String.fromCharCode.apply(null, uintArray);
-    return decodeURIComponent(escape(encodedString));
-  }
   ngAfterViewInit() {
+
     this.editor.setTheme('eclipse');
     this.editor.setMode('java');
     this.editor.resize();
@@ -49,9 +30,34 @@ export class CodesComponent implements OnInit {
       enableBasicAutocompletion: true
     });
   }
-  fileChanged(e) {
-    this.file = e.target.files[0];
+
+  uploadDocument(text, nome: string) {
+      this.setnamep(nome);
+      this.uploadcontent(text);
   }
+  setnamep(nome: string){
+    this.service.saveName(nome).subscribe(() => this.getCodes());
+  }
+
+  readf(){
+    this.editor.setText(this.fileString);
+  }
+
+  savetxt(text: string){
+    this.uploadcontent(text);
+  }
+
+  fileChanged(e, nome: string) {
+    this.file = e.target.files[0];
+    let fileReader = new FileReader();
+    fileReader.onloadend = (e) => {
+      this.fileString = fileReader.result;
+      this.setnamep(nome);
+      this.uploadcontent(this.fileString);
+    };
+    fileReader.readAsText(this.file);
+  }
+
   ngOnInit() {
     this.getCodes();
   }
@@ -69,7 +75,11 @@ export class CodesComponent implements OnInit {
   }
 
   insertcodes(codes: CodesDTO){
-    this.service.insertcodes(codes).subscribe(() => this.getCodes())
+    this.service.insertcodes(codes).subscribe(() => this.getCodes());
+  }
+
+  uploadcontent(fileString: string){
+    this.service.uploadcontent(fileString).subscribe(() => this.getCodes())
   }
 
   clear(){

@@ -49,17 +49,17 @@
             {{codes.data_m}}
           </td>
           <td>
+            <div class="Block">
+              <label id="lbl">Code </label>
+              <input type='file' (change)="fileChanged($event, codes.nome)">
+            </div>
+            <button (click)="uploadDocument(text, codes.nome)">upload</button>
+            <button (click)="readf()">leggi</button>
+          </td>
+          <td>
             <button (click)="update(codes)">Save</button>
           <td>
             <button (click)="delete(codes)">Delete</button>
-          </td>
-          <td>
-            <div class="Block">
-              <label id="lbl">Code </label>
-              <input type='file' (change)="fileChanged($event)">
-            </div>
-            <button (click)="uploadDocument(file)">upload</button>
-            <button (click)="readf()">leggi</button>
           </td>
         </tr>
       </table>
@@ -72,7 +72,8 @@
 <ace-editor
         [(text)]="text"
         #editor
-        style="height:4000px;">
+        style="height:1000px; width: 1300px">
 </ace-editor>
+<!-- <button (click)="savetxt(text)">Save</button>-->
 </div>
 </perfect-scrollbar>

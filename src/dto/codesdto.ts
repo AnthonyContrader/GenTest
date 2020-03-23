@@ -2,7 +2,7 @@
 export class CodesDTO{
 
     id: number;
-    nome: string
+    nome: string;
     data_i: string;
     data_m: string;
 
