@@ -8,6 +8,9 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 import {EditorComponent} from './editor/editor.component';
 import { AceEditorModule } from 'ng2-ace-editor';
 import {CodesComponent} from './codes/codes.component';
+import { ProgettiComponent } from './progetti/progetti.component';
+import {SupportComponent} from './support/support.component';
+
 import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -22,7 +25,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
  * @see AdminRoutingModule
  */
 @NgModule({
-  declarations: [AdminDashboardComponent, UsersComponent, WorkInProgressComponent, EditorComponent, CodesComponent],
+  declarations: [AdminDashboardComponent, UsersComponent, WorkInProgressComponent, EditorComponent, CodesComponent,ProgettiComponent,SupportComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

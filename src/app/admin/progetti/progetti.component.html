@@ -1,0 +1,74 @@
+<perfect-scrollbar>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+          <tr>
+              <td>
+                <input placeholder="nome del progetto" [(ngModel)]="progettitoinsert.nome">
+              </td>
+              <td>
+                  <select [(ngModel)]="progettitoinsert.userDTO">
+                     <option *ngFor="let user of users" [ngValue]="user" >{{user.username}}</option>
+                   </select>
+                </td>
+                
+              <td>
+                <button (click)="insert(progettitoinsert)">Insert</button>
+              </td>
+              <td>
+                <button (click)="clear()">Clear</button>
+              </td>
+              
+            </tr>
+        <tr>
+          <th>
+           Nome del progetto
+          </th>
+          <!--<th>
+            Data inserimento
+          </th>
+          <th>
+            Data modifica
+          </th>-->
+          <th>
+            Proprietario
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Delete
+            </th>
+        <tr *ngFor="let progetti of progettis"> <!--ripete l'elemento host per ciascun elemento in elenco-->
+          <td>
+            <input [(ngModel)]="progetti.nome">
+          </td>
+           <!-- <td>
+              {{progetti.data_i}}
+            </td>
+            <td>
+                {{progetti.data_m}}
+            </td>
+            >-->
+            <td>
+              <label >{{progetti.userDTO.username}}</label>
+             </td>
+ 
+            <td>
+                <button (click)=update(progetti)>Save</button>
+            </td>
+          <td>
+            <button (click)="delete(progetti)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</div>
+</perfect-scrollbar>
