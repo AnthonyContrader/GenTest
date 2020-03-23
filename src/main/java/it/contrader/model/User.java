@@ -25,7 +25,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-	
+
+	public User(String username	, String password) {
+		this.username=username;
+		this.password=password;
+	}
+	public User(String username){
+		this.username=username;
+	}
+
+	public User(long id) {
+		this.id = id;
+	}
+
 	public enum Usertype {
 		ADMIN,
 		USER
