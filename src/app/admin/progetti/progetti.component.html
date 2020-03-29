@@ -1,14 +1,14 @@
-<perfect-scrollbar>
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-md-1">
 
-    </div>
+<perfect-scrollbar>
+<div class="box">
+<div class="container">
     <div class="col-md-10">
       <table>
           <tr>
               <td>
+                <div class="css-input">
                 <input placeholder="nome del progetto" [(ngModel)]="progettitoinsert.nome">
+                </div>
               </td>
               <td>
                   <select [(ngModel)]="progettitoinsert.userDTO">
@@ -17,10 +17,10 @@
                 </td>
 
               <td>
-                <button (click)="insert(progettitoinsert)">Insert</button>
+                <button mat-button (click)="insert(progettitoinsert)">Insert</button>
               </td>
               <td>
-                <button (click)="clear()">Clear</button>
+                <button mat-button (click)="clear()">Clear</button>
               </td>
 
             </tr>
@@ -45,7 +45,9 @@
             </th>
         <tr *ngFor="let progetti of progettis"> <!--ripete l'elemento host per ciascun elemento in elenco-->
           <td>
+            <div class="input-container">
             <input [(ngModel)]="progetti.nome">
+            </div>
           </td>
            <!-- <td>
               {{progetti.data_i}}
@@ -55,14 +57,16 @@
             </td>
             >-->
             <td>
+              <div class="input-container">
               <label >{{progetti.userDTO.username}}</label>
+              </div>
              </td>
 
             <td>
-                <button (click)=update(progetti)>Save</button>
+                <button mat-button (click)=update(progetti)>Save</button>
             </td>
           <td>
-            <button (click)="delete(progetti)">Delete</button>
+            <button mat-button (click)="delete(progetti)">Delete</button>
           </td>
         </tr>
       </table>
@@ -72,3 +76,5 @@
   </div>
 </div>
 </perfect-scrollbar>
+
+

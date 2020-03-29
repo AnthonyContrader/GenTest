@@ -10,6 +10,13 @@ import { AdminModule } from './admin/admin.module';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { DioComponent } from './dio/dio.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+//import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -20,13 +27,21 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DioComponent
   ],
   imports: [
+    
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    
+    MatNativeDateModule,
+   
     BrowserModule,
     AppRoutingModule,
     LoginModule,
-    HttpClientModule,
     LayoutModule,
     AdminModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
