@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-codes',
   templateUrl: './codes.component.html',
-  styleUrls: ['./codes.component.css']
+  styleUrls: ['./codes.component.scss']
 })
 export class CodesComponent implements OnInit {
 

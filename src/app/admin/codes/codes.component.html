@@ -1,81 +1,77 @@
 <perfect-scrollbar>
-
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-md-10">
-      <table>
-        <div class="box">
-        <tr>
-          <td>
-             <input  class="css-input" placeholder="nome del codice" [(ngModel)]="codestoinsert.nome">
-          </td>
-          <td>
-            <button mat-button (click)="insertcodes(codestoinsert)">Insert</button >
-          </td>
-          <td>
-            <button mat-button (click)="clear()">Clear</button>
-          </td>
-        </tr>
-          </div>
-      </table>
-      <table class="move">
-        <tr>
-          <th>
-            Nome del progetto
-          </th>
-          <th>
-            Data di inserimento
-          </th>
-          <th>
-            data di modifica
-          </th>
-          <th>
-            Edit
-          </th>
-          <th>
-            Delete
-          </th>
-          <th>
-            Upload the file
-          </th>
-        </tr>
-        <tr *ngFor="let codes of codess">
-          <td>
-            <input class="css-input" [(ngModel)]="codes.nome">
-          </td>
-          <td>
-            {{codes.data_i}}
-          </td>
-          <td>
-            {{codes.data_m}}
-          </td>
-          <td>
-            <div class="Block">
-              <label id="lbl">Code </label>
-              <input type='file' (change)="fileChanged($event, codes.nome)">
+  <div class="container">
+    <div style="padding-top: 15%">
+      <div class="col-md-10">
+            <div class="box">
+              <tr>
+                <td>
+                   <input  class="css-input" placeholder="nome del codice" [(ngModel)]="codestoinsert.nome">
+                </td>
+                <td>
+                  <button mat-button (click)="insertcodes(codestoinsert)">Insert</button >
+                </td>
+                <td>
+                  <button mat-button (click)="clear()">Clear</button>
+                </td>
+              </tr>
             </div>
-            <button mat-button (click)="uploadDocument(text, codes.nome)">upload</button>
-            <button mat-button (click)="readf()">leggi</button>
-          </td>
-          <td>
-            <button mat-button (click)="update(codes)">Save</button>
-          <td>
-            <button mat-button (click)="delete(codes)">Delete</button>
-          </td>
-        </tr>
-      </table>
+        </div>
+      </div>
+    <div class="pad">
+          <table>
+            <tr>
+              <th>
+                Nome del progetto
+              </th>
+              <th>
+                Data di inserimento
+              </th>
+              <th>
+                data di modifica
+              </th>
+              <th>
+                Edit
+              </th>
+            </tr>
+            <tr *ngFor="let codes of codess">
+              <td>
+                <input class="css-input" [(ngModel)]="codes.nome">
+              </td>
+              <td>
+                {{codes.data_i}}
+              </td>
+              <td>
+                {{codes.data_m}}
+              </td>
+              <td>
+                <div class="Block">
+                  <input type="file" id="file"  (change)="fileChanged($event, codes.nome)" />
+                  <label for="file" class="btn-2">Choose</label>
+                </div>
+              </td>
+              <td>
+                <button mat-button (click)="uploadDocument(text, codes.nome)">upload</button>
+              </td>
+              <td>
+                <button mat-button (click)="readf()">leggi</button>
+              </td>
+              <td>
+                <button mat-button (click)="update(codes)">Save</button>
+              </td>
+              <td>
+                <button mat-button (click)="delete(codes)">Delete</button>
+              </td>
+            </tr>
+          </table>
+      </div>
     </div>
-    <div class="col-md-1">
-    </div>
+  <div style="padding-top: 3%">
+  <ace-editor
+          [(text)]="text"
+          #editor
+          style="height:1000px; width: 1300px;">
+  </ace-editor>
+  <!-- <button (click)="savetxt(text)">Save</button>-->
   </div>
-</div>
-<div>
-<ace-editor
-        [(text)]="text"
-        #editor
-        style="height:1000px; width: 1300px; padding-top: ">
-</ace-editor>
-<!-- <button (click)="savetxt(text)">Save</button>-->
-</div>
 </perfect-scrollbar>
 

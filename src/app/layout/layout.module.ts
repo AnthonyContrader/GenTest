@@ -5,6 +5,7 @@ import { AdminMenuComponent } from './admin-layout/admin-menu/admin-menu.compone
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import {DemoMaterialModule} from "../material.module";
+import {PerfectScrollbarModule} from "ngx-perfect-scrollbar";
 
 /**
  * Modulo di layout. Viene caricato nel rputer outlet padre e poi
@@ -20,7 +21,8 @@ import {DemoMaterialModule} from "../material.module";
     imports: [
         CommonModule,
         RouterModule,
-        DemoMaterialModule
+        DemoMaterialModule,
+        PerfectScrollbarModule
     ]
 })
 export class LayoutModule { }
