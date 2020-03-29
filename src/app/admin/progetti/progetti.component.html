@@ -15,14 +15,14 @@
                      <option *ngFor="let user of users" [ngValue]="user" >{{user.username}}</option>
                    </select>
                 </td>
-                
+
               <td>
                 <button (click)="insert(progettitoinsert)">Insert</button>
               </td>
               <td>
                 <button (click)="clear()">Clear</button>
               </td>
-              
+
             </tr>
         <tr>
           <th>
@@ -57,7 +57,7 @@
             <td>
               <label >{{progetti.userDTO.username}}</label>
              </td>
- 
+
             <td>
                 <button (click)=update(progetti)>Save</button>
             </td>

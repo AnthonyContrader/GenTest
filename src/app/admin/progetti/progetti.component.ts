@@ -15,9 +15,9 @@ export class ProgettiComponent implements OnInit {
 
   progettis: ProgettiDTO[];
   users: UserDTO[];
-    progettitoinsert: ProgettiDTO = new ProgettiDTO()
-    user: UserDTO;
-  
+  progettitoinsert: ProgettiDTO = new ProgettiDTO();
+  user: UserDTO;
+
 
   constructor(private userService: UserService, private progettiService: ProgettiService) { }
 
@@ -27,7 +27,7 @@ export class ProgettiComponent implements OnInit {
     this.getProgetti();
   }
 
-  
+
   getProgetti(){
     this.progettiService.getAll().subscribe(progettis => this.progettis = progettis);
 }
@@ -42,16 +42,16 @@ update(progetti:ProgettiDTO){
     this.progettiService.update(progetti).subscribe(() => this.getProgetti());
 }
 insert(progetti:ProgettiDTO){
-  
+
     this.user = this.progettitoinsert.userDTO;
     progetti.userDTO = this.user;
-    
+
     this.progettiService.insert(progetti).subscribe(() => this.getProgetti());
     this.clear;
-   
+
 }
 clear(){
     this.progettitoinsert=new ProgettiDTO();
-} 
+}
 
 }

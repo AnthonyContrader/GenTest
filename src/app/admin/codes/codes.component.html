@@ -1,23 +1,24 @@
 <perfect-scrollbar>
+
 <div class="container">
   <div class="row mt-5">
-    <div class="col-md-1">
-    </div>
     <div class="col-md-10">
       <table>
+        <div class="box">
         <tr>
           <td>
-            <input placeholder="nome del codice" [(ngModel)]="codestoinsert.nome">
+             <input  class="css-input" placeholder="nome del codice" [(ngModel)]="codestoinsert.nome">
           </td>
           <td>
-            <button (click)="insertcodes(codestoinsert)">Insert</button>
+            <button mat-button (click)="insertcodes(codestoinsert)">Insert</button >
           </td>
           <td>
-            <button (click)="clear()">Clear</button>
+            <button mat-button (click)="clear()">Clear</button>
           </td>
         </tr>
+          </div>
       </table>
-      <table>
+      <table class="move">
         <tr>
           <th>
             Nome del progetto
@@ -40,7 +41,7 @@
         </tr>
         <tr *ngFor="let codes of codess">
           <td>
-            <input [(ngModel)]="codes.nome">
+            <input class="css-input" [(ngModel)]="codes.nome">
           </td>
           <td>
             {{codes.data_i}}
@@ -53,13 +54,13 @@
               <label id="lbl">Code </label>
               <input type='file' (change)="fileChanged($event, codes.nome)">
             </div>
-            <button (click)="uploadDocument(text, codes.nome)">upload</button>
-            <button (click)="readf()">leggi</button>
+            <button mat-button (click)="uploadDocument(text, codes.nome)">upload</button>
+            <button mat-button (click)="readf()">leggi</button>
           </td>
           <td>
-            <button (click)="update(codes)">Save</button>
+            <button mat-button (click)="update(codes)">Save</button>
           <td>
-            <button (click)="delete(codes)">Delete</button>
+            <button mat-button (click)="delete(codes)">Delete</button>
           </td>
         </tr>
       </table>
@@ -72,8 +73,9 @@
 <ace-editor
         [(text)]="text"
         #editor
-        style="height:1000px; width: 1300px">
+        style="height:1000px; width: 1300px; padding-top: ">
 </ace-editor>
 <!-- <button (click)="savetxt(text)">Save</button>-->
 </div>
 </perfect-scrollbar>
+

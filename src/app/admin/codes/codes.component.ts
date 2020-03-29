@@ -23,7 +23,7 @@ export class CodesComponent implements OnInit {
 
   ngAfterViewInit() {
 
-    this.editor.setTheme('eclipse');
+    this.editor.setTheme('monokai');
     this.editor.setMode('java');
     this.editor.resize();
     this.editor.getEditor().setOptions({

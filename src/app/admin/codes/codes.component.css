@@ -1,5 +1,5 @@
 
-s
+
 
 
 /*Tables*/
@@ -10,7 +10,11 @@ table {
     border-radius: 4px;
     -moz-border-radius: 4px;
 }
-
+.move{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
 th, td {
     text-align: center;
     padding: 2px;
@@ -22,11 +26,12 @@ td{
 
 
 tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: #1c1c1c;
+    color: #ffffff;
 }
 
 th {
-    background-color: #ffffff;
+    background-color: #1c1c1c;
     color: #ffffff;
 }
 
@@ -40,9 +45,25 @@ input, select{
 }
 
 input:hover,  input:active, input:focus{
-    border: 2px solid #737373;
+    border: 2px solid rgb(255, 255, 255);
 }
 
 button:hover{
-    background-color: #c3c3c3;
+    background-color: rgb(194, 60, 231);
+}
+button {
+    background-color: #9d32ba;
+    color: #ffffff
+}
+
+.css-input { border-color:#cccccc; text-align:center; box-shadow: 0px 0px 5px 0px rgba(255, 0, 255, 0.75); border-radius:32px; border-style:hidden; border-width:0px; font-size:13px; padding:8px; background-color: #ffffff  }
+.css-input:focus { outline:none; }
+.box{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(34, 34, 34, 0.71);
+    border-radius:20px;
+    padding:70px 100px;
 }

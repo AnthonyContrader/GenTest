@@ -1,56 +1,224 @@
 
-#header{
-    background-color: #ffffff;
+/*#header{*/
+/*    background-color: #ffffff;*/
+/*}*/
+/*.searchContainer {*/
+/*    margin-top: 10px;*/
+/*    display: inline-block;*/
+/*    width:100%;*/
+/*    height: auto;*/
+/*    padding: auto;*/
+/*    margin-left:10px;*/
+/*    border: 0;*/
+/*    border-radius: 21px;*/
+/*    overflow: hidden;*/
+/*  background-color: white;*/
+/*  }*/
+
+
+/*  .searchIcon {*/
+/*    padding: 0.5rem;*/
+/*    z-index:2;*/
+/*    background-color: rgba(64, 64, 64, 0.17);*/
+/*  }*/
+
+/*  .searchBox {*/
+/*    border: 0;*/
+/*    padding: 0.5rem;*/
+/*    background-color: white;*/
+/*    font-size: 12px;*/
+/*  }*/
+
+/*  .searchButton {*/
+/*      height: 70%;*/
+/*      margin-top:7px;*/
+/*    background: white;*/
+/*    border: 2px solid #343434;*/
+/*    color: #000000;*/
+/*    border-radius: 15px;*/
+
+/*  }*/
+
+/*  p{*/
+/*      font-size: 19px;*/
+/*      color: #000000;*/
+/*      margin-left: 0px;*/
+/*      padding-left: 5px;*/
+/*      padding-top: 12px;*/
+/*      height: inherit;*/
+/*      width: 100%;*/
+/*      background-color: #ffffff !important;*/
+/*  }*/
+
+/*  i:hover{*/
+/*    background-color: #ffffff;*/
+/*  }*/
+
+
+/*
+=====
+EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS
+=====
+*/
+
+.menu:hover .menu__link:not(:hover){
+    color: #6337a2;
 }
-.searchContainer {
-    margin-top: 10px;
-    display: inline-block;
-    width:100%;
-    height: auto;
-    padding: auto;
-    margin-left:10px;
-    border: 0;
-    border-radius: 21px;
+
+/*
+=====
+MENU STYLES
+=====
+*/
+
+/* core styles */
+
+.menu__list{
+    display: flex;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.menu__group{
+    flex-grow: 5;
+}
+
+.menu__link{
+    display: block;
+}
+
+/* skin */
+
+.menu{
+    background-color: #c23ce7;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+}
+
+.menu__link{
+    padding: 2rem 1.5rem;
+
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* states */
+.menu__link:focus{
+    outline: 2px solid #fff;
+}
+
+/* hover animation */
+
+.menu__link{
+    position: relative;
     overflow: hidden;
-  background-color: white;
-  }
 
+    will-change: color;
+    transition: color .25s ease-out;
+}
 
-  .searchIcon {
-    padding: 0.5rem;
-    z-index:2;
-    background-color: rgba(64, 64, 64, 0.17);
-  }
+.menu__link::before,
+.menu__link::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #fff;
 
-  .searchBox {
-    border: 0;
-    padding: 0.5rem;
-    background-color: white;
-    font-size: 12px;
-  }
+    will-change: width;
+    transition: width .1s ease-out;
 
-  .searchButton {
-      height: 70%;
-      margin-top:7px;
-    background: white;
-    border: 2px solid #343434;
-    color: #000000;
-    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+}
 
-  }
+.menu__link::before{
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-  p{
-      font-size: 19px;
-      color: #000000;
-      margin-left: 0px;
-      padding-left: 5px;
-      padding-top: 12px;
-      height: inherit;
-      width: 100%;
-      background-color: #ffffff !important;
-  }
+.menu__link::after{
+    right: 50%;
+    transform: translateX(50%);
+}
 
-  i:hover{
-    background-color: #ffffff;
+.menu__link:hover::before,
+.menu__link:hover::after{
+    width: 100%;
+    transition-duration: .2s;
+}
 
-  }
+/*
+=====
+DEMO
+=====
+*/
+
+@media (min-width: 768px){
+
+    html{
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 767px){
+
+    html{
+        font-size: 50%;
+    }
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page{
+    box-sizing: border-box;
+    max-width: 640px;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    order: 1;
+    margin: auto;
+}
+
+/*
+=====
+LinkedIn
+=====
+*/
+
+.linkedin{
+    width: 100%;
+    background-color: #f0f0f0;
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.linkedin__container{
+    max-width: 1000px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.linkedin__text{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.linkedin__link{
+    color: #ff5c5c;
+}

@@ -12,6 +12,7 @@ import { ProgettiComponent } from './progetti/progetti.component';
 import {SupportComponent} from './support/support.component';
 
 import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
+import {DemoMaterialModule} from "../material.module";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -26,13 +27,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
  */
 @NgModule({
   declarations: [AdminDashboardComponent, UsersComponent, WorkInProgressComponent, EditorComponent, CodesComponent,ProgettiComponent,SupportComponent],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    FormsModule,
-    AceEditorModule,
-    PerfectScrollbarModule
-  ],
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        FormsModule,
+        AceEditorModule,
+        PerfectScrollbarModule,
+        DemoMaterialModule
+    ],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
