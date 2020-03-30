@@ -1,5 +1,5 @@
 <perfect-scrollbar>
-  <div class="container">
+  <div class="container" >
     <div style="padding-top: 15%">
       <div class="col-md-10">
             <div class="box">
@@ -18,10 +18,9 @@
         </div>
       </div>
     <div class="pad">
-          <table>
-            <tr>
+
               <th>
-                Nome del progetto
+                Nome del codice
               </th>
               <th>
                 Data di inserimento
@@ -32,7 +31,7 @@
               <th>
                 Edit
               </th>
-            </tr>
+
             <tr *ngFor="let codes of codess">
               <td>
                 <input class="css-input" [(ngModel)]="codes.nome">
@@ -62,9 +61,9 @@
                 <button mat-button (click)="delete(codes)">Delete</button>
               </td>
             </tr>
-          </table>
+        </div>
       </div>
-    </div>
+
   <div style="padding-top: 3%">
   <ace-editor
           [(text)]="text"
