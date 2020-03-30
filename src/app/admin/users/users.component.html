@@ -1,10 +1,6 @@
 <perfect-scrollbar>
 <div class="container">
-  <div class="row mt-5">
-    <div class="col-md-1">
-
-    </div>
-    <div class="col-md-10">
+    <div class="col-md-10" style="padding-top:5%">
       <table>
         <tr>
           <th>
@@ -25,10 +21,14 @@
         </tr>
         <tr>
           <td>
+              <div class="css-input">
             <input placeholder="username" [(ngModel)]="usertoinsert.username">
+          </div>
           </td>
           <td>
+              <div class="css-input">
             <input placeholder="password" [(ngModel)]="usertoinsert.password">
+          </div>
           </td>
           <td>
             <select placeholder="usertype" [(ngModel)]="usertoinsert.usertype">
@@ -37,18 +37,22 @@
             </select>
           </td>
           <td>
-            <button (click)="insert(usertoinsert)">Insert</button>
+            <button mat-button (click)="insert(usertoinsert)">Insert</button>
           </td>
           <td>
-            <button (click)="clear()">Clear</button>
+            <button mat-button (click)="clear()">Clear</button>
           </td>
         </tr>
         <tr *ngFor="let user of users">
           <td>
+              <div class="input-container">
             <input [(ngModel)]="user.username">
+            </div>
           </td>
           <td>
+              <div class="input-container">
             <input [(ngModel)]="user.password">
+            </div>
           </td>
           <td>
             <select [(ngModel)]="user.usertype">
@@ -57,10 +61,10 @@
               </select>
           </td>
           <td>
-            <button (click)=update(user)>Save</button>
+            <button mat-button (click)=update(user)>Save</button>
           </td>
           <td>
-            <button (click)="delete(user)">Delete</button>
+            <button mat-button (click)="delete(user)">Delete</button>
           </td>
         </tr>
       </table>
@@ -68,6 +72,6 @@
     <div class="col-md-1">
 
     </div>
-  </div>
+  
 </div>
 </perfect-scrollbar>
