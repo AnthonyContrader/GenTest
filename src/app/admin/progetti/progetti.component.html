@@ -1,0 +1,44 @@
+<perfect-scrollbar>
+<div class="container">
+    <div class="col-md-10" style="padding-top: 5%">
+              <tr>
+                  <td>
+                    <div class="css-input">
+                    <input placeholder="nome del progetto" [(ngModel)]="progettitoinsert.nome">
+                    </div>
+                  </td>
+                  <td>
+                    <button mat-button (click)="insert(progettitoinsert)">Insert</button>
+                  </td>
+                  <td>
+                    <button mat-button (click)="clear()">Clear</button>
+                  </td>
+                </tr>
+            <tr>
+              <th>
+               Nome del progetto
+              </th>
+              <th>
+                Edit
+              </th>
+              <th>
+                Delete
+                </th>
+            <tr *ngFor="let progetti of progettis"> <!--ripete l'elemento host per ciascun elemento in elenco-->
+              <td>
+                <div class="input-container">
+                    <input [(ngModel)]="progetti.nome">
+                </div>
+              </td>
+                <td>
+                    <button mat-button (click)=update(progetti)>Save</button>
+                </td>
+              <td>
+                <button mat-button (click)="delete(progetti)">Delete</button>
+              </td>
+            </tr>
+        </div>
+    </div>
+</perfect-scrollbar>
+
+

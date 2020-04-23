@@ -1,0 +1,62 @@
+
+<perfect-scrollbar>
+  <div class="container">
+      <div class="col-md-10" style="padding-top: 5%">
+        <table>
+          <tr>
+            <th>
+              Domanda
+            </th>
+            <th>
+              Risposta
+            </th>
+            <th>
+              Edit
+            </th>
+            <th>
+              Support
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div class="css-input">
+                <input placeholder="domanda" [(ngModel)]="supporttoinsert.domanda">
+              </div>
+            </td>
+            <td>
+              <div class="css-input">
+                <input placeholder="risposta" [(ngModel)]="supporttoinsert.risposta">
+              </div>
+            </td>
+
+            <td>
+              <button mat-button (click)="insert(supporttoinsert)">Insert</button>
+            </td>
+            <td>
+              <button mat-button (click)="clear()">Clear</button>
+            </td>
+          </tr>
+          <tr *ngFor="let support of supports">
+            <td>
+              <div class="css-input">
+                <input [(ngModel)]="support.domanda">
+              </div>
+            </td>
+            <td>
+              <div class="css-input">
+                <input [(ngModel)]="support.risposta">
+              </div>
+            </td>
+            <td>
+              <button mat-button (click)=update(support)>Save</button>
+            </td>
+            <td>
+              <button mat-button (click)="delete(support)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+</perfect-scrollbar>
