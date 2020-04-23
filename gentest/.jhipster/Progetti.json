@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "codes",
+            "otherEntityName": "codes",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "progetti"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20200410103615",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "progetti",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "gentest"
+}

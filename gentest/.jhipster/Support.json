@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "domanda",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "risposta",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20200409162330",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "support",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "gentest"
+}

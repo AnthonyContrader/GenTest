@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "codes",
+            "otherEntityName": "codes",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "nome",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "tests"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "data_i",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "data_m",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20200410104209",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "tests",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "gentest"
+}
