@@ -11,9 +11,19 @@ export class CodesService extends AbstractService<CodesDTO>{
 
   constructor(http: HttpClient) {
     super(http);
-    this.type = 'codes';
+    this.microservicetype = "api";
+    this.name= "codes";
+    
+    
   }
-
+  auth() {
+    const codes = JSON.parse(localStorage.getItem('currentCodes')) as CodesDTO;
+    if (codes) {
+      return 'Bearer ' + codes.authorities;
+    } else {
+      return '';
+    }
+  }
     insertcodes(dto: CodesDTO): Observable<any> {
       return this.http.post('http://localhost:' + this.port + '/' + this.type + '/insertcodes', dto);
   }

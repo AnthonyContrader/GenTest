@@ -6,4 +6,5 @@ export class ProgettiDTO {
     data_i: string;
     data_m: string;
     userDTO: UserDTO;
+    authorities: string;
     }
